@@ -20,8 +20,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
         background: "rgb(255, 255, 255)",
         display: "flex",
         alignItems: "center",
-        px: 0,
-        py: 0,
+        maxWidth: "100",
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -37,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
       </Box>
 
       {/* Top Ribbon */}
-      <Box width="100%" height="100%" sx={{ px: 0, py: 0 }}>
+      <Box height="100%" sx={{ px: 0, py: 0, width: "100%" }}>
         <Box
           sx={{
             width: "100%",
@@ -48,58 +47,75 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
             justifyContent: "space-between",
             alignItems: "center",
             flexWrap: "wrap",
-            px: 2,
           }}
         >
-          <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
-            <Button color="inherit" size="small">
-              Patient Guide
-            </Button>
-            <Button color="inherit" size="small">
-              Book Health Packages
-            </Button>
-            <Button color="inherit" size="small">
-              Patient Login
-            </Button>
-          </Box>
-
-          {/* Right Section */}
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            {/* Helpline */}
-            <Box
-              sx={{
-                bgcolor: "error.main",
-                px: 1.5,
-                py: 0.5,
-                borderRadius: 1,
-                fontWeight: "bold",
-              }}
-            >
-              24x7 Helpline: 040 4848 6868
+          <Box
+            sx={{
+              padding: "1rem",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexWrap: "wrap",
+              width: "100%",
+            }}
+          >
+            <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
+              <Button color="inherit" size="small">
+                Patient Guide
+              </Button>
+              <Button color="inherit" size="small">
+                Book Health Packages
+              </Button>
+              <Button color="inherit" size="small">
+                Patient Login
+              </Button>
             </Box>
-            {/* Search */}
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                borderRadius: 24,
-                bgcolor: "rgba(255, 255, 255, 0.2)",
-                pl: 2,
-                pr: 1,
-                ml: 2,
-              }}
-            >
-              <InputBase
-                placeholder="Search..."
-                inputProps={{ "aria-label": "Search" }}
-                sx={{ color: "white", width: 200 }}
-              />
-              <IconButton aria-label="Search" sx={{ color: "white" }}>
-                <Search fontSize="small" />
+
+            {/* Right Section */}
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              {/* Helpline */}
+              <Box
+                sx={{
+                  bgcolor: "error.main",
+                  px: 1.5,
+                  py: 0.5,
+                  borderRadius: 1,
+                  fontWeight: "bold",
+                }}
+              >
+                24x7 Helpline: 040 4848 6868
+              </Box>
+              {/* Search */}
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  borderRadius: 24,
+                  bgcolor: "rgba(255, 255, 255, 0.2)",
+                  pl: 2,
+                  pr: 1,
+                  ml: 2,
+                }}
+              >
+                <InputBase
+                  placeholder="Search..."
+                  inputProps={{ "aria-label": "Search" }}
+                  sx={{ color: "white", width: 200 }}
+                />
+                <IconButton aria-label="Search" sx={{ color: "white" }}>
+                  <Search fontSize="small" />
+                </IconButton>
+              </Box>
+
+              {/* Drawer Toggle Button */}
+              <IconButton
+                aria-label="Open menu"
+                sx={{ color: "white", ml: 2 }}
+                onClick={toggleDrawer}
+              >
+                <Menu />
               </IconButton>
             </Box>
-
-            {/* Drawer Toggle Button */}
           </Box>
         </Box>
 
