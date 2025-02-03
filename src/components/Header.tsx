@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
     >
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <img
-          src="/src/assets/logo.jpeg"
+          src="/media/logo.jpeg"
           alt="Pace Hospitals"
           style={{
             maxHeight: "10rem",

@@ -18,7 +18,7 @@ const HmpvSection = () => {
         py: { xs: 4, md: 8 },
         // Fixed image path
         background:
-          "url('/src/assets/GettyImages-1652856485-3000x2000.jpg') center/cover no-repeat fixed",
+          "url('/media/GettyImages-1652856485-3000x2000.jpg') center/cover no-repeat fixed",
       }}
     >
       <Grid container spacing={2}>

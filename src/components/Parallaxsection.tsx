@@ -28,7 +28,7 @@ const ParallaxSection = () => {
 
           //   borderRadius: 4,
           border: "8px solid #B7B7B7",
-          backgroundImage: "url('/src/assets/mm.jpg')",
+          backgroundImage: "url('/media/mm.jpg')",
           backgroundSize: "100vw",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center -5rem",
