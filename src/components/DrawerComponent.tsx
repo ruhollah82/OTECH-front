@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import {
   Drawer,
   List,
@@ -14,11 +14,10 @@ const drawerWidth = 240;
 
 interface DrawerComponentProps {
   open: boolean;
-  toggleDrawer: () => void;
 }
 
 const DrawerComponent = forwardRef<HTMLDivElement, DrawerComponentProps>(
-  ({ open, toggleDrawer }, ref) => {
+  ({ open }, ref) => {
     return (
       <Drawer
         sx={{
@@ -32,13 +31,13 @@ const DrawerComponent = forwardRef<HTMLDivElement, DrawerComponentProps>(
         variant="persistent"
         anchor="right"
         open={open}
-        ref={ref} // Attach the ref to the drawer
+        ref={ref}
       >
         {/* Account Info */}
         <Box sx={{ padding: "16px", textAlign: "center" }}>
           <Avatar
             alt="User Avatar"
-            src="https://i.pravatar.cc/150?img=3" // Replace with actual user image URL
+            src="https://i.pravatar.cc/150?img=3"
             sx={{ width: 100, height: 100, marginBottom: "8px" }}
           />
           <Typography variant="h6">User Name</Typography>
@@ -47,13 +46,13 @@ const DrawerComponent = forwardRef<HTMLDivElement, DrawerComponentProps>(
 
         {/* Dashboard Links */}
         <List>
-          <ListItem button>
+          <ListItem component="button">
             <ListItemText primary="Dashboard" />
           </ListItem>
-          <ListItem button>
+          <ListItem component="button">
             <ListItemText primary="Settings" />
           </ListItem>
-          <ListItem button>
+          <ListItem component="button">
             <ListItemText primary="Logout" />
           </ListItem>
         </List>

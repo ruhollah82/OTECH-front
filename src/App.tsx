@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Container from "./components/bgContainer";
 import SpecialityCare from "./components/SuperSpecialy";
@@ -13,28 +13,25 @@ import DrawerComponent from "./components/DrawerComponent";
 
 const App: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
-  const drawerRef = useRef(null);
 
   const toggleDrawer = () => {
-    setOpenDrawer(!openDrawer);
+    setOpenDrawer((prev) => !prev);
   };
 
   // Close drawer when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
-        drawerRef.current &&
-        !drawerRef.current.contains(event.target as Node) &&
-        openDrawer
+        openDrawer &&
+        !document
+          .querySelector(".MuiDrawer-paper")
+          ?.contains(event.target as Node)
       ) {
         setOpenDrawer(false);
       }
     };
 
-    // Add event listener on mount
     document.addEventListener("mousedown", handleClickOutside);
-
-    // Clean up the event listener on unmount
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -43,11 +40,7 @@ const App: React.FC = () => {
   return (
     <Container>
       <Header toggleDrawer={toggleDrawer} />
-      <DrawerComponent
-        ref={drawerRef}
-        open={openDrawer}
-        toggleDrawer={toggleDrawer}
-      />
+      <DrawerComponent open={openDrawer} />
       <SpecialityCare />
       <ParallaxSection />
       <SpecialitiesSection />

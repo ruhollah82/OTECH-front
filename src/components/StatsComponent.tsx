@@ -4,7 +4,6 @@ import {
   LocalHospital,
   MedicalServices,
   EmojiEvents,
-  Star,
 } from "@mui/icons-material";
 
 const StatsComponent = () => {

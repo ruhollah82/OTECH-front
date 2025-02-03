@@ -7,32 +7,29 @@ import {
   InputBase,
   Box,
 } from "@mui/material";
-import { Search } from "@mui/icons-material";
+import { Search, Menu } from "@mui/icons-material";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  toggleDrawer: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
   return (
-    // Outer container for logo and ribbons
     <Box
       sx={{
         background: "rgb(255, 255, 255)",
         display: "flex",
-        // justifyContent: "space-between",
         alignItems: "center",
         px: 0,
         py: 0,
       }}
     >
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
+      <Box sx={{ display: "flex", alignItems: "center" }}>
         <img
           src="/src/assets/logo.jpeg"
           alt="Pace Hospitals"
           style={{
-            maxHeight: "10rem", // Adjust this value as needed
+            maxHeight: "10rem",
             width: "auto",
             objectFit: "contain",
           }}
@@ -43,7 +40,7 @@ const Header: React.FC = () => {
       <Box width="100%" height="100%" sx={{ px: 0, py: 0 }}>
         <Box
           sx={{
-            width: "100%", // Ensure it spans full width if needed
+            width: "100%",
             height: "5rem",
             bgcolor: "black",
             color: "white",
@@ -51,6 +48,7 @@ const Header: React.FC = () => {
             justifyContent: "space-between",
             alignItems: "center",
             flexWrap: "wrap",
+            px: 2,
           }}
         >
           <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
@@ -67,13 +65,12 @@ const Header: React.FC = () => {
 
           {/* Right Section */}
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            {/*  Helpline */}
+            {/* Helpline */}
             <Box
               sx={{
                 bgcolor: "error.main",
                 px: 1.5,
                 py: 0.5,
-                height: "100%",
                 borderRadius: 1,
                 fontWeight: "bold",
               }}
@@ -89,6 +86,7 @@ const Header: React.FC = () => {
                 bgcolor: "rgba(255, 255, 255, 0.2)",
                 pl: 2,
                 pr: 1,
+                ml: 2,
               }}
             >
               <InputBase
@@ -100,6 +98,8 @@ const Header: React.FC = () => {
                 <Search fontSize="small" />
               </IconButton>
             </Box>
+
+            {/* Drawer Toggle Button */}
           </Box>
         </Box>
 
@@ -111,7 +111,7 @@ const Header: React.FC = () => {
             backdropFilter: "blur(10px)",
             boxShadow: "none",
             borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
-            width: "100%", // Make sure it takes full width
+            width: "100%",
           }}
         >
           <Toolbar

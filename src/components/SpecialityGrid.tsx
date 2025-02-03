@@ -1,10 +1,4 @@
-import {
-  Grid,
-  Card,
-  CardActionArea,
-  CardContent,
-  Typography,
-} from "@mui/material";
+import { Grid, Card, CardActionArea, Typography } from "@mui/material";
 import { ReactElement } from "react";
 
 interface SpecialityItem {
