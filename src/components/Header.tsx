@@ -6,8 +6,10 @@ import {
   IconButton,
   InputBase,
   Box,
+  Avatar,
+  Typography,
 } from "@mui/material";
-import { Search, Menu } from "@mui/icons-material";
+import { Search } from "@mui/icons-material";
 
 interface HeaderProps {
   toggleDrawer: () => void;
@@ -40,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
         <Box
           sx={{
             width: "100%",
-            height: "5rem",
+            // height: "5rem",
             bgcolor: "black",
             color: "white",
             display: "flex",
@@ -73,18 +75,6 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
 
             {/* Right Section */}
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              {/* Helpline */}
-              <Box
-                sx={{
-                  bgcolor: "error.main",
-                  px: 1.5,
-                  py: 0.5,
-                  borderRadius: 1,
-                  fontWeight: "bold",
-                }}
-              >
-                24x7 Helpline: 040 4848 6868
-              </Box>
               {/* Search */}
               <Box
                 sx={{
@@ -108,13 +98,32 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
               </Box>
 
               {/* Drawer Toggle Button */}
-              <IconButton
+              {/* <IconButton
                 aria-label="Open menu"
                 sx={{ color: "white", ml: 2 }}
                 onClick={toggleDrawer}
               >
                 <Menu />
-              </IconButton>
+              </IconButton> */}
+              <Button
+                onClick={toggleDrawer}
+                sx={{
+                  // padding: "16px",
+                  color: "gray",
+                  textAlign: "center",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  gap: 2,
+                }}
+              >
+                <Typography variant="h6">User ID</Typography>
+                <Avatar
+                  alt="User Avatar"
+                  src="https://i.pravatar.cc/150?img=3"
+                  sx={{ width: 50, height: 50, marginBottom: "8px" }}
+                />
+              </Button>
             </Box>
           </Box>
         </Box>

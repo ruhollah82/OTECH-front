@@ -36,15 +36,24 @@ const SpecialityGrid = ({ specialities }: SpecialityGridProps) => {
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
               minWidth: "18vw",
               minHeight: "18vw",
+              height: "100%",
               display: "flex",
               alignItems: "center",
               "&:hover": {
                 transform: "translateY(-5px)",
-                boxShadow: "0px 10px 20px rgba(0,0,0,0.15)",
+                // boxShadow: "0px 10px 20px rgba(0,0,0,0.15)",
               },
             }}
           >
-            <CardActionArea href={speciality.href} sx={{ p: 2 }}>
+            <CardActionArea
+              href={speciality.href}
+              sx={{
+                p: 2,
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
               <Grid
                 container
                 direction="column"
