@@ -4,12 +4,11 @@ import { Box, Typography, Grid } from "@mui/material";
 const SpecialitiesSection: React.FC = () => {
   return (
     <>
-      {/* First Section */}
       <Box
         sx={{
           textAlign: "center",
-          backgroundColor: "#91AEFD", // Top section background color
-          padding: { xs: "2rem 1rem", sm: "3rem 2rem", md: "4rem 3rem" }, // Adjust padding for responsiveness
+          backgroundColor: "#91AEFD",
+          padding: { xs: "2rem 1rem", sm: "3rem 2rem", md: "4rem 3rem" },
           position: "relative",
         }}
       >
@@ -20,7 +19,6 @@ const SpecialitiesSection: React.FC = () => {
               sx={{
                 transitionDuration: "1s",
                 transitionTimingFunction: "ease-in-out",
-                transitionDelay: "initial",
                 transitionProperty: "opacity",
                 lineHeight: "initial",
               }}
@@ -32,24 +30,23 @@ const SpecialitiesSection: React.FC = () => {
                 sx={{
                   fontSize: { xs: "27px", sm: "34px" },
                   fontWeight: 700,
-                  color: "#fff", // White text for contrast against the blue background
+                  color: "#fff",
                   display: "inline",
                 }}
               >
-                Our Specialities
+                تخصص‌های ما
               </Typography>
             </Box>
           </Grid>
         </Grid>
       </Box>
 
-      {/* Second Section */}
       <Box
         sx={{
           textAlign: "center",
-          backgroundColor: "#fff", // Second section background color
-          padding: { xs: "2rem 1rem", sm: "3rem 2rem", md: "4rem 3rem" }, // Padding for spacing
-          boxShadow: 3, // Adding subtle shadow for depth
+          backgroundColor: "#fff",
+          padding: { xs: "2rem 1rem", sm: "3rem 2rem", md: "4rem 3rem" },
+          boxShadow: 3,
         }}
       >
         <Grid container spacing={0}>
@@ -66,40 +63,31 @@ const SpecialitiesSection: React.FC = () => {
                   fontWeight: "bold",
                   display: "unset",
                   fontSize: { xs: "1rem", sm: "1.25rem" },
-                  color: "#333", // Dark text for contrast on light background
+                  color: "#333",
                 }}
               >
-                PACE Hospitals
+                بیمارستان‌های PACE
               </Typography>
               <Typography
                 variant="body1"
                 sx={{
                   display: "unset",
                   fontSize: { xs: "1rem", sm: "1.125rem" },
-                  color: "#555", // Slightly lighter text for readability
-                  lineHeight: 1.8, // Increase line-height for better readability
-                  textAlign: "justify", // Justify text for a cleaner appearance
+                  color: "#555",
+                  lineHeight: 1.8,
+                  textAlign: "justify",
                 }}
               >
-                is one of the{" "}
-                <strong style={{ fontWeight: "bold" }}>
-                  Best Multi-Super Speciality Hospital in Hyderabad
-                </strong>
-                , Telangana, India, focused on tertiary care services in the
-                field of Medical Gastroenterology, Surgical Gastroenterology, GI
-                &amp; HPB Oncology, Hepatology, Urology, Andrology, Nephrology
-                &amp; Dialysis, Orthopaedics, Sports Medicine &amp; Joint
-                Replacement, Spine Surgery, Medical &amp; Surgical Oncology,
-                Pulmonology, Bariatrics &amp; Diabetology, Cardiology,
-                Cardiothoracic Surgery, Plastic &amp; Reconstructive Surgery,
-                Neurology, Neurosurgery, Internal Medicine &amp; Critical Care,
-                Endocrinology, Obstetrics &amp; Gynaecology, ENT, Pediatrics,
-                Dermatology, Psychiatry, Physiotherapy and Dentistry. At PACE,
-                we are focused on wellness. We are striving to enhance the
-                quality of life, not mere sickness management. Our healthcare
-                delivery system is attuned to providing transparent, inclusive,
-                cost-effective services that are in harmony with the growing
-                local needs.
+                بیمارستان‌های PACE یکی از بهترین بیمارستان‌های چندتخصصی در
+                حیدرآباد، تلانگانا، هند هستند که خدمات پزشکی گسترده‌ای در
+                زمینه‌های مختلف از جمله گاستروانتولوژی، جراحی گاستروانتولوژی،
+                آنکولوژی، هپاتولوژی، اورولوژی، ارتوپدی، جراحی ستون فقرات،
+                آنکولوژی، جراحی پلاستیک و ترمیمی، نورولوژی، جراحی مغز و اعصاب،
+                پزشکی داخلی و مراقبت‌های ویژه، غدد درون‌ریز، زنان و زایمان و
+                دیگر زمینه‌های پزشکی ارائه می‌دهند. در PACE، ما بر رفاه بیماران
+                و بهبود کیفیت زندگی تمرکز داریم و همواره در تلاش هستیم تا خدمات
+                بهداشتی شفاف، جامع و مقرون به صرفه را ارائه دهیم که با نیازهای
+                روزافزون جامعه هماهنگ باشد.
               </Typography>
             </Box>
           </Grid>

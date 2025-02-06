@@ -80,7 +80,7 @@ const BlogPostsGrid: React.FC<{ sections: BlogSection[] }> = ({ sections }) => {
                       display: "inline",
                     }}
                   >
-                    Health Articles and Information
+                    تازه ها و مقالات سلامتی
                   </Typography>
                 </Box>
               </Grid>
@@ -125,22 +125,6 @@ const BlogPostsGrid: React.FC<{ sections: BlogSection[] }> = ({ sections }) => {
                       <Typography variant="h6" component="h3" gutterBottom>
                         {post.title}
                       </Typography>
-                      {/* <Box
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: 1,
-                          color: "text.secondary",
-                          my: 1,
-                        }}
-                      >
-                        <span>By {post.author}</span>
-                        <span>•</span>
-                        <span>{post.date}</span>
-                      </Box>
-                      <Typography variant="body2" color="text.secondary">
-                        {post.description}
-                      </Typography> */}
                     </CardContent>
                   </Card>
                 </Box>
@@ -163,73 +147,79 @@ const blogSections: BlogSection[] = [
         id: "ntd-day",
         imageUrl:
           "https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/World+Neglected+Tropical+Diseases+Day-+30+January+2025+-+PACE+Hospitals-67387316-1920w.jpg",
-        title: "World NTD Day, 30 January 2025 - Theme, Importance and History",
+        title:
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده، ۳۰ ژانویه ۲۰۲۵ - موضوع، اهمیت و تاریخچه",
         href: "/world-ntd-day",
-        author: "Pace Hospitals",
-        date: "January 28, 2025",
+        author: "بیمارستان‌های پیس",
+        date: "28 ژانویه 2025",
         description:
-          "World Neglected Tropical Diseases Day (World NTD Day) is a global healthcare event celebrated on 30th January every year...",
-        tags: ["World Health Days"],
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
+        tags: ["روزهای سلامت جهانی"],
       },
       {
         id: "ntd-day",
         imageUrl:
           "https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/World+Neglected+Tropical+Diseases+Day-+30+January+2025+-+PACE+Hospitals-67387316-1920w.jpg",
-        title: "World NTD Day, 30 January 2025 - Theme, Importance and History",
+        title:
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده، ۳۰ ژانویه ۲۰۲۵ - موضوع، اهمیت و تاریخچه",
         href: "/world-ntd-day",
-        author: "Pace Hospitals",
-        date: "January 28, 2025",
+        author: "بیمارستان‌های پیس",
+        date: "28 ژانویه 2025",
         description:
-          "World Neglected Tropical Diseases Day (World NTD Day) is a global healthcare event celebrated on 30th January every year...",
-        tags: ["World Health Days"],
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
+        tags: ["روزهای سلامت جهانی"],
       },
       {
         id: "ntd-day",
         imageUrl:
           "https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/World+Neglected+Tropical+Diseases+Day-+30+January+2025+-+PACE+Hospitals-67387316-1920w.jpg",
-        title: "World NTD Day, 30 January 2025 - Theme, Importance and History",
+        title:
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده، ۳۰ ژانویه ۲۰۲۵ - موضوع، اهمیت و تاریخچه",
         href: "/world-ntd-day",
-        author: "Pace Hospitals",
-        date: "January 28, 2025",
+        author: "بیمارستان‌های پیس",
+        date: "28 ژانویه 2025",
         description:
-          "World Neglected Tropical Diseases Day (World NTD Day) is a global healthcare event celebrated on 30th January every year...",
-        tags: ["World Health Days"],
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
+        tags: ["روزهای سلامت جهانی"],
       },
       {
         id: "ntd-day",
         imageUrl:
           "https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/World+Neglected+Tropical+Diseases+Day-+30+January+2025+-+PACE+Hospitals-67387316-1920w.jpg",
-        title: "World NTD Day, 30 January 2025 - Theme, Importance and History",
+        title:
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده، ۳۰ ژانویه ۲۰۲۵ - موضوع، اهمیت و تاریخچه",
         href: "/world-ntd-day",
-        author: "Pace Hospitals",
-        date: "January 28, 2025",
+        author: "بیمارستان‌های پیس",
+        date: "28 ژانویه 2025",
         description:
-          "World Neglected Tropical Diseases Day (World NTD Day) is a global healthcare event celebrated on 30th January every year...",
-        tags: ["World Health Days"],
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
+        tags: ["روزهای سلامت جهانی"],
       },
       {
         id: "ntd-day",
         imageUrl:
           "https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/World+Neglected+Tropical+Diseases+Day-+30+January+2025+-+PACE+Hospitals-67387316-1920w.jpg",
-        title: "World NTD Day, 30 January 2025 - Theme, Importance and History",
+        title:
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده، ۳۰ ژانویه ۲۰۲۵ - موضوع، اهمیت و تاریخچه",
         href: "/world-ntd-day",
-        author: "Pace Hospitals",
-        date: "January 28, 2025",
+        author: "بیمارستان‌های پیس",
+        date: "28 ژانویه 2025",
         description:
-          "World Neglected Tropical Diseases Day (World NTD Day) is a global healthcare event celebrated on 30th January every year...",
-        tags: ["World Health Days"],
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
+        tags: ["روزهای سلامت جهانی"],
       },
       {
         id: "ntd-day",
         imageUrl:
           "https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/World+Neglected+Tropical+Diseases+Day-+30+January+2025+-+PACE+Hospitals-67387316-1920w.jpg",
-        title: "World NTD Day, 30 January 2025 - Theme, Importance and History",
+        title:
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده، ۳۰ ژانویه ۲۰۲۵ - موضوع، اهمیت و تاریخچه",
         href: "/world-ntd-day",
-        author: "Pace Hospitals",
-        date: "January 28, 2025",
+        author: "بیمارستان‌های پیس",
+        date: "28 ژانویه 2025",
         description:
-          "World Neglected Tropical Diseases Day (World NTD Day) is a global healthcare event celebrated on 30th January every year...",
-        tags: ["World Health Days"],
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
+        tags: ["روزهای سلامت جهانی"],
       },
     ],
   },

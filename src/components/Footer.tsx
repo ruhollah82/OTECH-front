@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Grid,
-  IconButton,
-  Typography,
-  Link,
-  Divider,
-} from "@mui/material";
+import { Box, Grid, IconButton, Typography, Divider } from "@mui/material";
 import {
   WhatsApp,
   Facebook,
@@ -24,7 +17,6 @@ const Footer: React.FC = () => {
       sx={{ backgroundColor: "primary.dark", padding: "32px", color: "white" }}
     >
       <Grid container spacing={4} justifyContent="center">
-        {/* Social Media Section */}
         <Grid item xs={12} sm={6} md={4}>
           <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
             <IconButton
@@ -94,12 +86,10 @@ const Footer: React.FC = () => {
           </Box>
         </Grid>
 
-        {/* Divider */}
         <Grid item xs={12}>
           <Divider sx={{ backgroundColor: "white", marginY: 3 }} />
         </Grid>
 
-        {/* Copyright Section */}
         <Grid item xs={12} sm={5}>
           <Box
             sx={{
@@ -110,16 +100,7 @@ const Footer: React.FC = () => {
             }}
           >
             <Typography variant="body2" align="center" sx={{ marginBottom: 1 }}>
-              © 2025 All Rights Reserved | PACE Hospitals
-            </Typography>
-            <Typography variant="body2" align="center">
-              <Link
-                href="https://www.pacehospitals.in"
-                color="inherit"
-                underline="hover"
-              >
-                Visit our website
-              </Link>
+              © 2025 تمامی حقوق متعلق به MS-OTech می باشد
             </Typography>
           </Box>
         </Grid>

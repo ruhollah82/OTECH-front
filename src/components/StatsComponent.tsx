@@ -9,19 +9,16 @@ import {
 const StatsComponent = () => {
   return (
     <Box>
-      {/* Stats Section */}
       <Grid
-        container
         justifyContent="center"
         spacing={4}
         sx={{
           py: "2rem",
           textAlign: "center",
-          backgroundColor: "rgb(48,76,153)", // Background color
+          backgroundColor: "rgb(48,76,153)",
           gap: "2rem",
         }}
       >
-        {/* Happy Patients */}
         <Grid item xs={6} md={2}>
           <Box sx={{ color: "white" }}>
             <EmojiEmotions sx={{ fontSize: 64, color: "white" }} />
@@ -32,14 +29,13 @@ const StatsComponent = () => {
               3,12,338
             </Typography>
             <Typography variant="body1" sx={{ color: "white", mt: 1 }}>
-              Happy Patients
+              بیماران راضی
             </Typography>
           </Box>
         </Grid>
 
         <Divider orientation="vertical" variant="middle" flexItem />
 
-        {/* Surgeries Performed */}
         <Grid item xs={6} md={2}>
           <Box sx={{ color: "white" }}>
             <LocalHospital sx={{ fontSize: 64, color: "white" }} />
@@ -50,14 +46,13 @@ const StatsComponent = () => {
               98,538
             </Typography>
             <Typography variant="body1" sx={{ color: "white", mt: 1 }}>
-              Surgeries Performed
+              جراحی‌های انجام‌شده
             </Typography>
           </Box>
         </Grid>
 
         <Divider orientation="vertical" variant="middle" flexItem />
 
-        {/* Medical Staff */}
         <Grid item xs={6} md={2}>
           <Box sx={{ color: "white" }}>
             <MedicalServices sx={{ fontSize: 64, color: "white" }} />
@@ -68,14 +63,13 @@ const StatsComponent = () => {
               684
             </Typography>
             <Typography variant="body1" sx={{ color: "white", mt: 1 }}>
-              Medical Staff
+              کادر پزشکی
             </Typography>
           </Box>
         </Grid>
 
         <Divider orientation="vertical" variant="middle" flexItem />
 
-        {/* Establishment Year */}
         <Grid item xs={6} md={2}>
           <Box sx={{ color: "white" }}>
             <EmojiEvents sx={{ fontSize: 64, color: "white" }} />
@@ -86,13 +80,12 @@ const StatsComponent = () => {
               2011
             </Typography>
             <Typography variant="body1" sx={{ color: "white", mt: 1 }}>
-              Establishment Year
+              سال تأسیس
             </Typography>
           </Box>
         </Grid>
       </Grid>
 
-      {/* Feedback Section */}
       <Grid
         container
         justifyContent="center"
@@ -110,7 +103,7 @@ const StatsComponent = () => {
               mb: 2,
             }}
           >
-            Your feedback is our achievement.
+            بازخورد شما دستاورد ماست.
           </Typography>
           <Link
             href="/#reviews"
@@ -122,7 +115,7 @@ const StatsComponent = () => {
             }}
           >
             <Typography>
-              Provide us your valuable feedback and suggestions.
+              بازخورد و پیشنهادات ارزشمند خود را برای ما ارسال کنید.
             </Typography>
           </Link>
         </Grid>
@@ -140,7 +133,6 @@ const StatsComponent = () => {
           <Button
             variant="contained"
             color="primary"
-            // startIcon={<Star />}
             href="/patient-feedback"
             sx={{
               borderRadius: "4px",
@@ -158,7 +150,7 @@ const StatsComponent = () => {
               },
             }}
           >
-            Click here to provide your feedback
+            برای ارائه بازخورد خود اینجا کلیک کنید
           </Button>
         </Grid>
       </Grid>

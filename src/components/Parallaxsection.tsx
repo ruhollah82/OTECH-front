@@ -4,14 +4,10 @@ const ParallaxSection = () => {
   return (
     <Box
       sx={{
-        // position: "relative",
-        // textAlign: "center",
         backgroundColor: "#f6f6f6",
-        // minHeight: "100vh",
         display: "flex",
-        // alignItems: "center",
         justifyContent: "center",
-        px: 4, // Increased padding
+        px: 4,
         paddingTop: "8rem",
       }}
     >
@@ -23,10 +19,9 @@ const ParallaxSection = () => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          px: 5, // Increased padding
-          py: 8, // Increased padding
+          px: 5,
+          py: 8,
 
-          //   borderRadius: 4,
           border: "8px solid #B7B7B7",
           backgroundImage: "url('/media/mm.jpg')",
           backgroundSize: "100vw",
@@ -41,85 +36,81 @@ const ParallaxSection = () => {
             right: 0,
             bottom: 0,
             backgroundColor: "rgba(0, 0, 0, 0.7)",
-            // borderRadius: 4,
           },
         }}
       >
-        {/* Content remains the same */}
         <Typography
           variant="h2"
           sx={{
-            fontSize: { xs: 36, md: 56 }, // Increased font size
+            fontSize: { xs: 36, md: 56 },
             color: "white",
             fontWeight: "bold",
             position: "relative",
           }}
         >
-          We are PACE Hospitals
+          ما بیمارستان‌های PACE هستیم
         </Typography>
 
         <Typography
           variant="h3"
           sx={{
-            fontSize: { xs: 30, md: 40 }, // Increased font size
+            fontSize: { xs: 30, md: 40 },
             color: "#FFE9AA",
-            mt: 3, // Adjusted margin-top
+            mt: 3,
             textAlign: "center",
             position: "relative",
           }}
         >
-          Best Multi-Super Speciality Hospitals in Hyderabad
+          بهترین بیمارستان‌های چند تخصصی در حیدرآباد
         </Typography>
 
         <Divider
-          sx={{ width: "70%", my: 4, borderWidth: "3px", borderColor: "grey" }} // Adjusted width and margin
+          sx={{ width: "70%", my: 4, borderWidth: "3px", borderColor: "grey" }}
         />
 
         <Typography
           variant="h4"
           sx={{
-            fontSize: { xs: 24, md: 36 }, // Increased font size
+            fontSize: { xs: 24, md: 36 },
             fontWeight: "bold",
             color: "white",
             position: "relative",
           }}
         >
-          State-of-the-art Liver and Kidney Transplant Centre
+          مرکز پیوند کبد و کلیه پیشرفته
         </Typography>
 
         <Typography
           variant="body1"
           sx={{
-            fontSize: { xs: 18, md: 22 }, // Increased font size
+            fontSize: { xs: 18, md: 22 },
             color: "white",
             textAlign: "center",
-            maxWidth: "900px", // Increased max-width
-            mt: 3, // Adjusted margin-top
+            maxWidth: "900px",
+            mt: 3,
             position: "relative",
           }}
         >
-          <strong>PACE Hospitals</strong> is one of the{" "}
-          <strong>Best Hospitals in Hyderabad, India</strong> with proven
-          credentials in delivering excellent care for a wide range of tertiary
-          healthcare services with personalized and ethical Next Gen Medicare.
+          <strong>بیمارستان‌های PACE</strong> یکی از{" "}
+          <strong>بهترین بیمارستان‌های حیدرآباد، هند</strong> است که با اعتبار
+          اثبات‌شده در ارائه مراقبت‌های عالی در مجموعه‌ای از خدمات بهداشتی
+          terciary با مراقبت‌های شخصی‌شده و پزشکی نسل آینده فعالیت می‌کند.
         </Typography>
 
         <Stack direction={{ xs: "column", md: "row" }} spacing={4} mt={5}>
-          {" "}
-          {/* Increased spacing */}
           <Button
             variant="contained"
             href="/liver-transplant"
             sx={{
               bgcolor: "primary.main",
               color: "white",
-              px: 5, // Increased padding
-              py: 3, // Increased padding
+              px: 5,
+              py: 3,
               borderRadius: 3,
               position: "relative",
             }}
           >
-            Dept of Liver Transplant
+            بخش پیوند کبد
           </Button>
           <Button
             variant="contained"
@@ -127,13 +118,13 @@ const ParallaxSection = () => {
             sx={{
               bgcolor: "primary.main",
               color: "white",
-              px: 5, // Increased padding
-              py: 3, // Increased padding
+              px: 5,
+              py: 3,
               borderRadius: 3,
               position: "relative",
             }}
           >
-            Dept of Kidney Transplant
+            بخش پیوند کلیه
           </Button>
         </Stack>
       </Box>

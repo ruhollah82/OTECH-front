@@ -22,7 +22,7 @@ const HeroSection = () => {
           fontWeight: "bold",
         }}
       >
-        Super-Specialty Tertiary Care
+        مراقبت‌های تخصصی سومین سطح
       </Typography>
 
       <Divider
@@ -53,7 +53,7 @@ const HeroSection = () => {
               fontSize: "1.2rem",
             }}
           >
-            Book an appointment
+            رزرو نوبت
           </Button>
           <Button
             variant="contained"
@@ -67,7 +67,7 @@ const HeroSection = () => {
               fontSize: "1.2rem",
             }}
           >
-            Video / Phone consultation
+            مشاوره ویدئویی / تلفنی
           </Button>
         </Stack>
 
@@ -86,7 +86,7 @@ const HeroSection = () => {
               fontSize: "1.2rem",
             }}
           >
-            Online Lab Reports
+            گزارش‌های آزمایشگاهی آنلاین
           </Button>
           <Button
             variant="contained"
@@ -100,7 +100,7 @@ const HeroSection = () => {
               fontSize: "1.2rem",
             }}
           >
-            Robotic Surgery
+            جراحی رباتیک
           </Button>
         </Stack>
       </Stack>

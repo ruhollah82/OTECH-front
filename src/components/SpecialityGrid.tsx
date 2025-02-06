@@ -22,7 +22,6 @@ const SpecialityGrid = ({ specialities }: SpecialityGridProps) => {
         px: 16,
         backgroundColor: "#f6f6f6",
         Width: "100%",
-        // margin: "0 auto",
       }}
     >
       {specialities.map((speciality, index) => (
@@ -41,7 +40,6 @@ const SpecialityGrid = ({ specialities }: SpecialityGridProps) => {
               alignItems: "center",
               "&:hover": {
                 transform: "translateY(-5px)",
-                // boxShadow: "0px 10px 20px rgba(0,0,0,0.15)",
               },
             }}
           >

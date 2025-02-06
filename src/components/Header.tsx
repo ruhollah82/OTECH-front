@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <img
           src="/media/logo.jpeg"
-          alt="Pace Hospitals"
+          alt="بیمارستان‌های پِیس"
           style={{
             maxHeight: "10rem",
             width: "auto",
@@ -37,12 +37,10 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
         />
       </Box>
 
-      {/* Top Ribbon */}
       <Box height="100%" sx={{ px: 0, py: 0, width: "100%" }}>
         <Box
           sx={{
             width: "100%",
-            // height: "5rem",
             bgcolor: "black",
             color: "white",
             display: "flex",
@@ -63,19 +61,17 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
           >
             <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
               <Button color="inherit" size="small">
-                Patient Guide
+                راهنمای بیمار
               </Button>
               <Button color="inherit" size="small">
-                Book Health Packages
+                رزرو بسته‌های سلامتی
               </Button>
               <Button color="inherit" size="small">
-                Patient Login
+                ورود بیمار
               </Button>
             </Box>
 
-            {/* Right Section */}
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              {/* Search */}
               <Box
                 sx={{
                   display: "flex",
@@ -88,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
                 }}
               >
                 <InputBase
-                  placeholder="Search..."
+                  placeholder="جستجو..."
                   inputProps={{ "aria-label": "Search" }}
                   sx={{ color: "white", width: 200 }}
                 />
@@ -97,18 +93,9 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
                 </IconButton>
               </Box>
 
-              {/* Drawer Toggle Button */}
-              {/* <IconButton
-                aria-label="Open menu"
-                sx={{ color: "white", ml: 2 }}
-                onClick={toggleDrawer}
-              >
-                <Menu />
-              </IconButton> */}
               <Button
                 onClick={toggleDrawer}
                 sx={{
-                  // padding: "16px",
                   color: "gray",
                   textAlign: "center",
                   display: "flex",
@@ -117,9 +104,9 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
                   gap: 2,
                 }}
               >
-                <Typography variant="h6">User ID</Typography>
+                <Typography variant="h6">شناسه کاربری</Typography>
                 <Avatar
-                  alt="User Avatar"
+                  alt="آواتار کاربر"
                   src="https://i.pravatar.cc/150?img=3"
                   sx={{ width: 50, height: 50, marginBottom: "8px" }}
                 />
@@ -128,7 +115,6 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
           </Box>
         </Box>
 
-        {/* Main Navigation */}
         <AppBar
           position="static"
           color="transparent"
@@ -147,15 +133,14 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
               py: 1,
             }}
           >
-            {/* Navigation Links */}
             <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
-              <Button color="inherit">Home</Button>
-              <Button color="inherit">About Us</Button>
-              <Button color="inherit">Specialties</Button>
-              <Button color="inherit">Our Doctors</Button>
-              <Button color="inherit">Book Appointment</Button>
-              <Button color="inherit">Second Opinion</Button>
-              <Button color="inherit">More</Button>
+              <Button color="inherit">خانه</Button>
+              <Button color="inherit">درباره ما</Button>
+              <Button color="inherit">تخصص‌ها</Button>
+              <Button color="inherit">پزشکان ما</Button>
+              <Button color="inherit">رزرو ویزیت</Button>
+              <Button color="inherit">نظرات شما</Button>
+              <Button color="inherit">بیشتر</Button>
             </Box>
           </Toolbar>
         </AppBar>

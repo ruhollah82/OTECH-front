@@ -90,7 +90,6 @@ const PatientForm: React.FC = () => {
 
       <form onSubmit={handleSubmit}>
         <Grid container spacing={3}>
-          {/* Personal Information Section */}
           <Grid item xs={12}>
             <Typography
               variant="h6"
@@ -158,7 +157,6 @@ const PatientForm: React.FC = () => {
             />
           </Grid>
 
-          {/* Contact Information Section */}
           <Grid item xs={12} mt={4}>
             <Typography
               variant="h6"
@@ -214,7 +212,6 @@ const PatientForm: React.FC = () => {
             />
           </Grid>
 
-          {/* Medical Information Section */}
           <Grid item xs={12} mt={4}>
             <Typography
               variant="h6"
@@ -274,7 +271,6 @@ const PatientForm: React.FC = () => {
             />
           </Grid>
 
-          {/* Agreement and Submit Section */}
           <Grid item xs={12} mt={2}>
             <FormControlLabel
               control={

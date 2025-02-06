@@ -1,72 +1,72 @@
 import SpecialityGrid from "./SpecialityGrid";
 import {
-  HealthAndSafety, // Example MUI icon
-  // Orthopedics, // Example MUI icon
-  Vaccines, // Example MUI icon
-  Medication, // Example MUI icon
+  HealthAndSafety,
+  Psychology,
+  MedicalServices,
+  LocalHospital,
 } from "@mui/icons-material";
 
 const ParentComponent = () => {
   const specialities = [
     {
-      href: "/nephrology",
+      href: "/cardiology",
       icon: <HealthAndSafety sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "Nephrology",
+      title: "کاردیولوژی",
     },
     {
-      href: "/orthopaedics",
+      href: "/psychology",
+      icon: <Psychology sx={{ fontSize: 60, color: "#2B2A29" }} />,
+      title: "روانشناسی",
+    },
+    {
+      href: "/family-medicine",
+      icon: <MedicalServices sx={{ fontSize: 60, color: "#2B2A29" }} />,
+      title: "پزشکی خانواده",
+    },
+    {
+      href: "/dentistry",
+      icon: <LocalHospital sx={{ fontSize: 60, color: "#2B2A29" }} />,
+      title: "دندانپزشکی",
+    },
+    {
+      href: "/neurology",
       icon: <HealthAndSafety sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "Orthopaedics",
+      title: "عصب‌شناسی",
     },
     {
-      href: "/oncology",
-      icon: <Vaccines sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "Oncology",
+      href: "/pediatrics",
+      icon: <Psychology sx={{ fontSize: 60, color: "#2B2A29" }} />,
+      title: "پزشکی اطفال",
     },
     {
-      href: "/internal-medicine",
-      icon: <Medication sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "Internal Medicine",
+      href: "/gastroenterology",
+      icon: <MedicalServices sx={{ fontSize: 60, color: "#2B2A29" }} />,
+      title: "گوارش",
     },
     {
-      href: "/internal-medicine",
-      icon: <Medication sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "Internal Medicine",
+      href: "/dermatology",
+      icon: <LocalHospital sx={{ fontSize: 60, color: "#2B2A29" }} />,
+      title: "پوست و مو",
     },
     {
-      href: "/oncology",
-      icon: <Vaccines sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "Oncology",
+      href: "/emergency-medicine",
+      icon: <HealthAndSafety sx={{ fontSize: 60, color: "#2B2A29" }} />,
+      title: "پزشکی اورژانس",
     },
     {
-      href: "/internal-medicine",
-      icon: <Medication sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "Internal Medicine",
+      href: "/allergy-immunology",
+      icon: <Psychology sx={{ fontSize: 60, color: "#2B2A29" }} />,
+      title: "آلرژی و ایمونولوژی",
     },
     {
-      href: "/internal-medicine",
-      icon: <Medication sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "Internal Medicine",
+      href: "/orthopedics",
+      icon: <MedicalServices sx={{ fontSize: 60, color: "#2B2A29" }} />,
+      title: "ارتوپدی",
     },
     {
-      href: "/oncology",
-      icon: <Vaccines sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "Oncology",
-    },
-    {
-      href: "/internal-medicine",
-      icon: <Medication sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "Internal Medicine",
-    },
-    {
-      href: "/internal-medicine",
-      icon: <Medication sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "Internal Medicine",
-    },
-    {
-      href: "/oncology",
-      icon: <Vaccines sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "Oncology",
+      href: "/urology",
+      icon: <LocalHospital sx={{ fontSize: 60, color: "#2B2A29" }} />,
+      title: "ارولوژی",
     },
   ];
 
@@ -76,4 +76,5 @@ const ParentComponent = () => {
     </div>
   );
 };
+
 export default ParentComponent;

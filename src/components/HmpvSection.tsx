@@ -16,16 +16,13 @@ const HmpvSection = () => {
         width: "100%",
         overflow: "hidden",
         py: { xs: 4, md: 8 },
-        // Fixed image path
         background:
           "url('/media/GettyImages-1652856485-3000x2000.jpg') center/cover no-repeat fixed",
       }}
     >
       <Grid container spacing={2}>
-        {/* Spacer Column */}
         <Grid item xs={12} md={5} />
 
-        {/* Content Column */}
         <Grid
           item
           xs={12}
@@ -49,30 +46,20 @@ const HmpvSection = () => {
               fontSize: { xs: "2rem", md: "2.5rem" },
             }}
           >
-            HMPV RT-PCR Test
+            آزمایش RT-PCR برای ویروس HMPV
           </Typography>
 
           <Typography paragraph sx={{ textAlign: "justify" }}>
-            RT-PCR (Reverse Transcription Polymerase Chain Reaction) for HMPV is
-            a molecular diagnostic test used to detect the presence of Human
-            Metapneumovirus RNA in a patient's respiratory samples. It involves
-            converting RNA into DNA, then amplifying it to detectable levels.
-            This test is essential for diagnosing Human Metapneumovirus (HMPV)
-            infections.
+            آزمایش RT-PCR (واکنش زنجیره‌ای پلیمراز معکوس) برای شناسایی RNA ویروس
+            متاپنوموویروس انسانی (HMPV) در نمونه‌های تنفسی بیمار استفاده می‌شود.
+            این آزمایش با تبدیل RNA به DNA و سپس تقویت آن به میزان قابل شناسایی
+            انجام می‌شود. این تست برای تشخیص عفونت‌های HMPV ضروری است.
           </Typography>
 
           <Typography paragraph sx={{ textAlign: "justify" }}>
-            <Link
-              href="/human-metapneumovirus-hmpv-symptoms-causes-complications-treatment-prevention"
-              color="inherit"
-              underline="hover"
-            >
-              Symptoms of HMPV
-            </Link>{" "}
-            infection resemble those of other respiratory illnesses and may
-            include fever, cough, wheezing, nasal congestion, sore throat, and
-            difficulty breathing. In severe cases, HMPV can lead to
-            bronchiolitis or{" "}
+            علائم عفونت با HMPV مشابه دیگر بیماری‌های تنفسی است و شامل تب، سرفه،
+            خس‌خس سینه، گرفتگی بینی، گلودرد و دشواری در تنفس می‌شود. در موارد
+            شدید، این ویروس می‌تواند منجر به برونکوئولیت یا{" "}
             <Link
               href="https://www.pacehospital.com/pneumonia-causes-symptoms-types-treatment-prevention"
               target="_blank"
@@ -80,10 +67,10 @@ const HmpvSection = () => {
               color="inherit"
               underline="hover"
             >
-              pneumonia
+              ذات‌الریه
             </Link>
-            , especially in infants, elderly individuals, and those with
-            weakened immune systems.
+            شود، به‌ویژه در نوزادان، سالمندان و افرادی که سیستم ایمنی ضعیفی
+            دارند.
           </Typography>
 
           <Button
@@ -106,7 +93,7 @@ const HmpvSection = () => {
               },
             }}
           >
-            Know More About HMPV RT-PCR Test
+            اطلاعات بیشتر درباره آزمایش RT-PCR برای HMPV
           </Button>
         </Grid>
       </Grid>
