@@ -136,10 +136,51 @@ const blogSections: BlogSection[] = [
     posts: [
       {
         id: "ntd-day",
-        imageUrl:
-          "https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/World+Neglected+Tropical+Diseases+Day-+30+January+2025+-+PACE+Hospitals-67387316-1920w.jpg",
-        title:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده، ۳۰ ژانویه ۲۰۲۵ - موضوع، اهمیت و تاریخچه",
+        imageUrl: "/media/1398102214084736519390724.jpg",
+        title: "عوارض دارویی در بیماران ام اس",
+        href: "/wwww",
+        author: "lllllll",
+        date: "28 ژانویه 2025",
+        description: "description",
+        tags: ["روزهای سلامت جهانی"],
+      },
+      {
+        id: "ntd-day",
+        imageUrl: "/media/CbVqqMH7iz1M.jpg",
+        title: "بهترین زمان های خواب برای بیماران ام اس و اختلالات خواب",
+        href: "/world-ntd-day",
+        author: "بیمارستان‌های پیس",
+        date: "28 ژانویه 2025",
+        description:
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
+        tags: ["روزهای سلامت جهانی"],
+      },
+      {
+        id: "ntd-day",
+        imageUrl: "/media/qgcyifts74ai.jpeg",
+        title: "رژیم غذایی در بیماران مبتلا به ام اس",
+        href: "/world-ntd-day",
+        author: "بیمارستان‌های پیس",
+        date: "28 ژانویه 2025",
+        description:
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
+        tags: ["روزهای سلامت جهانی"],
+      },
+      {
+        id: "ntd-day",
+        imageUrl: "/media/iStock-1275708191.jpg",
+        title: "تاثیر ورزشدر سلامتی بیماران ام اس",
+        href: "/world-ntd-day",
+        author: "بیمارستان‌های پیس",
+        date: "28 ژانویه 2025",
+        description:
+          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
+        tags: ["روزهای سلامت جهانی"],
+      },
+      {
+        id: "ntd-day",
+        imageUrl: "/media/Coronavirus_2019-nCoV_1000x500.jpg",
+        title: "بیماری های واگیر خطرناک برای بیماران ام اس",
         href: "/world-ntd-day",
         author: "بیمارستان‌های پیس",
         date: "28 ژانویه 2025",
@@ -150,61 +191,8 @@ const blogSections: BlogSection[] = [
       {
         id: "ntd-day",
         imageUrl:
-          "https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/World+Neglected+Tropical+Diseases+Day-+30+January+2025+-+PACE+Hospitals-67387316-1920w.jpg",
-        title:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده، ۳۰ ژانویه ۲۰۲۵ - موضوع، اهمیت و تاریخچه",
-        href: "/world-ntd-day",
-        author: "بیمارستان‌های پیس",
-        date: "28 ژانویه 2025",
-        description:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
-        tags: ["روزهای سلامت جهانی"],
-      },
-      {
-        id: "ntd-day",
-        imageUrl:
-          "https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/World+Neglected+Tropical+Diseases+Day-+30+January+2025+-+PACE+Hospitals-67387316-1920w.jpg",
-        title:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده، ۳۰ ژانویه ۲۰۲۵ - موضوع، اهمیت و تاریخچه",
-        href: "/world-ntd-day",
-        author: "بیمارستان‌های پیس",
-        date: "28 ژانویه 2025",
-        description:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
-        tags: ["روزهای سلامت جهانی"],
-      },
-      {
-        id: "ntd-day",
-        imageUrl:
-          "https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/World+Neglected+Tropical+Diseases+Day-+30+January+2025+-+PACE+Hospitals-67387316-1920w.jpg",
-        title:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده، ۳۰ ژانویه ۲۰۲۵ - موضوع، اهمیت و تاریخچه",
-        href: "/world-ntd-day",
-        author: "بیمارستان‌های پیس",
-        date: "28 ژانویه 2025",
-        description:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
-        tags: ["روزهای سلامت جهانی"],
-      },
-      {
-        id: "ntd-day",
-        imageUrl:
-          "https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/World+Neglected+Tropical+Diseases+Day-+30+January+2025+-+PACE+Hospitals-67387316-1920w.jpg",
-        title:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده، ۳۰ ژانویه ۲۰۲۵ - موضوع، اهمیت و تاریخچه",
-        href: "/world-ntd-day",
-        author: "بیمارستان‌های پیس",
-        date: "28 ژانویه 2025",
-        description:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
-        tags: ["روزهای سلامت جهانی"],
-      },
-      {
-        id: "ntd-day",
-        imageUrl:
-          "https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/World+Neglected+Tropical+Diseases+Day-+30+January+2025+-+PACE+Hospitals-67387316-1920w.jpg",
-        title:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده، ۳۰ ژانویه ۲۰۲۵ - موضوع، اهمیت و تاریخچه",
+          "/media/3d-cartoon-planet-earth-and-location-pin-isolated-render-world-map-silhouette-planet-icon-cartography-and-geography-earth-day-travel-destination-holiday-and-transportation-vector.jpg",
+        title: "بهترین مناطق برای زندگی بیماران ام اس",
         href: "/world-ntd-day",
         author: "بیمارستان‌های پیس",
         date: "28 ژانویه 2025",

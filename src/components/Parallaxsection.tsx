@@ -1,4 +1,4 @@
-import { Box, Typography, Button, Stack, Divider } from "@mui/material";
+import { Box, Typography, Divider } from "@mui/material";
 
 const ParallaxSection = () => {
   return (

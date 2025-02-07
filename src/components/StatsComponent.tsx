@@ -71,7 +71,7 @@ const StatsComponent = () => {
               variant="body1"
               sx={{ color: theme.palette.primary.main, mt: 1 }}
             >
-              جراحی‌های انجام‌شده
+              تعداد کاربران فعال
             </Typography>
           </Box>
         </Grid>
