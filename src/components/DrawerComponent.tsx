@@ -41,7 +41,7 @@ const DrawerComponent = forwardRef<HTMLDivElement, DrawerComponentProps>(
         <Box sx={{ padding: "16px", textAlign: "center" }}>
           <Avatar
             alt="User Avatar"
-            src="https://i.pravatar.cc/150?img=3"
+            src="/media/_______.jpeg"
             sx={{
               width: 100,
               height: 100,
@@ -51,7 +51,11 @@ const DrawerComponent = forwardRef<HTMLDivElement, DrawerComponentProps>(
             }}
           />
           <Typography variant="h6" sx={{ color: "#fff", fontWeight: 500 }}>
-            نام بیمار
+            یونس قرایی
+          </Typography>
+          <Divider sx={{ margin: "8px 0", backgroundColor: "#444" }} />
+          <Typography variant="h6" sx={{ color: "#fff", fontWeight: 500 }}>
+            RRPM14035456
           </Typography>
         </Box>
         <Divider sx={{ margin: "8px 0", backgroundColor: "#444" }} />
@@ -75,7 +79,7 @@ const DrawerComponent = forwardRef<HTMLDivElement, DrawerComponentProps>(
             }}
           >
             <ListItemText
-              primary="داشبورد"
+              primary="اطلاعات بیمار"
               sx={{ fontWeight: 500, fontSize: "16px" }}
             />
           </ListItem>
@@ -96,7 +100,7 @@ const DrawerComponent = forwardRef<HTMLDivElement, DrawerComponentProps>(
             }}
           >
             <ListItemText
-              primary="تنظیمات"
+              primary="فعالیت های بیمار"
               sx={{ fontWeight: 500, fontSize: "16px" }}
             />
           </ListItem>

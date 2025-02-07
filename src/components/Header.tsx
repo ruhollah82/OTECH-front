@@ -104,10 +104,12 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
                   gap: 2,
                 }}
               >
-                <Typography variant="h6">شناسه کاربری</Typography>
+                <Typography variant="h6" sx={{ color: "white" }}>
+                  یونس قرایی
+                </Typography>
                 <Avatar
                   alt="آواتار کاربر"
-                  src="https://i.pravatar.cc/150?img=3"
+                  src="/media/_______.jpeg"
                   sx={{ width: 50, height: 50, marginBottom: "8px" }}
                 />
               </Button>
@@ -130,7 +132,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
               justifyContent: "space-between",
               px: 4,
               py: 1,
-              bgcolor: "#FF8000",
+              bgcolor: "#F6F6F6",
             }}
           >
             <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>

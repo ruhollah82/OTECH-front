@@ -22,7 +22,7 @@ const HeroSection = () => {
           fontWeight: "bold",
         }}
       >
-        مراقبت‌های تخصصی سومین سطح
+        OTech - MS
       </Typography>
 
       <Divider
@@ -33,6 +33,17 @@ const HeroSection = () => {
           my: 3,
         }}
       />
+      <Typography
+        variant="h2"
+        sx={{
+          color: "white",
+          fontSize: { xs: 36, md: 48 },
+          fontWeight: "bold",
+          marginBottom: "3rem",
+        }}
+      >
+        پلتفرم هوشمند مراقبت از بیماران MS
+      </Typography>
 
       <Stack
         direction={{ xs: "column", md: "row" }}
@@ -53,7 +64,7 @@ const HeroSection = () => {
               fontSize: "1.2rem",
             }}
           >
-            رزرو نوبت
+            درمانگر من
           </Button>
           <Button
             variant="contained"
@@ -67,7 +78,7 @@ const HeroSection = () => {
               fontSize: "1.2rem",
             }}
           >
-            مشاوره ویدئویی / تلفنی
+            دانش افزایی MS
           </Button>
         </Stack>
 
@@ -86,7 +97,7 @@ const HeroSection = () => {
               fontSize: "1.2rem",
             }}
           >
-            گزارش‌های آزمایشگاهی آنلاین
+            انجام تست های روزانه
           </Button>
           <Button
             variant="contained"

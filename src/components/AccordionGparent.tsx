@@ -11,32 +11,32 @@ const ParentComponent = () => {
     {
       href: "/cardiology",
       icon: <HealthAndSafety sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "کاردیولوژی",
+      title: "تست گیت",
     },
     {
       href: "/psychology",
       icon: <Psychology sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "روانشناسی",
+      title: "تمرینات",
     },
     {
       href: "/family-medicine",
       icon: <MedicalServices sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "پزشکی خانواده",
+      title: "دارو ها",
     },
     {
       href: "/dentistry",
       icon: <LocalHospital sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "دندانپزشکی",
+      title: "تغذیه",
     },
     {
       href: "/neurology",
       icon: <HealthAndSafety sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "عصب‌شناسی",
+      title: "ورزش و سلامتی",
     },
     {
       href: "/pediatrics",
       icon: <Psychology sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "پزشکی اطفال",
+      title: "سلامت خواب",
     },
     {
       href: "/gastroenterology",
@@ -46,7 +46,7 @@ const ParentComponent = () => {
     {
       href: "/dermatology",
       icon: <LocalHospital sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "پوست و مو",
+      title: "کار درمانی",
     },
     {
       href: "/emergency-medicine",
@@ -66,7 +66,7 @@ const ParentComponent = () => {
     {
       href: "/urology",
       icon: <LocalHospital sx={{ fontSize: 60, color: "#2B2A29" }} />,
-      title: "ارولوژی",
+      title: "فیزیوتراپی",
     },
   ];
 

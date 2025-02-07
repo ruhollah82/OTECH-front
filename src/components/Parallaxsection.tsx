@@ -48,9 +48,8 @@ const ParallaxSection = () => {
             position: "relative",
           }}
         >
-          ما بیمارستان‌های PACE هستیم
+          پلتفرم هوشمند بیماران MS
         </Typography>
-
         <Typography
           variant="h3"
           sx={{
@@ -61,13 +60,12 @@ const ParallaxSection = () => {
             position: "relative",
           }}
         >
-          بهترین بیمارستان‌های چند تخصصی در حیدرآباد
+          ارائه راه حل های نوآورانه برای بیماران MS
         </Typography>
 
         <Divider
           sx={{ width: "70%", my: 4, borderWidth: "3px", borderColor: "grey" }}
         />
-
         <Typography
           variant="h4"
           sx={{
@@ -77,9 +75,8 @@ const ParallaxSection = () => {
             position: "relative",
           }}
         >
-          مرکز پیوند کبد و کلیه پیشرفته
+          اولین مرکز ارائه خدمات هوشمند
         </Typography>
-
         <Typography
           variant="body1"
           sx={{
@@ -91,42 +88,10 @@ const ParallaxSection = () => {
             position: "relative",
           }}
         >
-          <strong>بیمارستان‌های PACE</strong> یکی از{" "}
-          <strong>بهترین بیمارستان‌های حیدرآباد، هند</strong> است که با اعتبار
-          اثبات‌شده در ارائه مراقبت‌های عالی در مجموعه‌ای از خدمات بهداشتی
-          terciary با مراقبت‌های شخصی‌شده و پزشکی نسل آینده فعالیت می‌کند.
+          این پروژه بستری مبتنی بر هوش مصنوعی برای بیماران مبتلا به ام اس است که
+          خدمات مورد نیاز انان را با استفاده از پردازش تصویر و یادگیری ماشین
+          ارایه میدهد
         </Typography>
-
-        <Stack direction={{ xs: "column", md: "row" }} spacing={4} mt={5}>
-          <Button
-            variant="contained"
-            href="/liver-transplant"
-            sx={{
-              bgcolor: "primary.main",
-              color: "white",
-              px: 5,
-              py: 3,
-              borderRadius: 3,
-              position: "relative",
-            }}
-          >
-            بخش پیوند کبد
-          </Button>
-          <Button
-            variant="contained"
-            href="/kidney-transplant"
-            sx={{
-              bgcolor: "primary.main",
-              color: "white",
-              px: 5,
-              py: 3,
-              borderRadius: 3,
-              position: "relative",
-            }}
-          >
-            بخش پیوند کلیه
-          </Button>
-        </Stack>
       </Box>
     </Box>
   );

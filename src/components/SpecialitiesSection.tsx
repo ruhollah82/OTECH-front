@@ -34,7 +34,7 @@ const SpecialitiesSection: React.FC = () => {
                   display: "inline",
                 }}
               >
-                تخصص‌های ما
+                خدمات هوشمند
               </Typography>
             </Box>
           </Grid>

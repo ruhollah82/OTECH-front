@@ -47,44 +47,33 @@ const HmpvSection = () => {
               fontSize: { xs: "2rem", md: "2.5rem" },
             }}
           >
-            آزمایش RT-PCR برای ویروس HMPV
+            بیماری MS چیست
           </Typography>
 
           <Typography paragraph sx={{ textAlign: "justify" }}>
-            آزمایش RT-PCR (واکنش زنجیره‌ای پلیمراز معکوس) برای شناسایی RNA ویروس
-            متاپنوموویروس انسانی (HMPV) در نمونه‌های تنفسی بیمار استفاده می‌شود.
-            این آزمایش با تبدیل RNA به DNA و سپس تقویت آن به میزان قابل شناسایی
-            انجام می‌شود. این تست برای تشخیص عفونت‌های HMPV ضروری است.
+            بیماری ام‌اس (Multiple Sclerosis) یکی از رایج ترین اختلالات خود
+            ایمنی در حوزه سلامت است که تاثیر مستقیم بر توانایی حرکتی و کیفیت
+            زندگی بیماران دارد. نظارت مستمر بر وضعیت بیماران، ارائه خدمات
+            توانبخشی و ارسال داده‌های تحلیلی به کاردرمانگر از نیازهای اساسی این
+            بیماران محسوب می‌شود.
           </Typography>
 
           <Typography paragraph sx={{ textAlign: "justify" }}>
-            علائم عفونت با HMPV مشابه دیگر بیماری‌های تنفسی است و شامل تب، سرفه،
-            خس‌خس سینه، گرفتگی بینی، گلودرد و دشواری در تنفس می‌شود. در موارد
-            شدید، این ویروس می‌تواند منجر به برونکوئولیت یا{" "}
-            <Link
-              href="https://www.pacehospital.com/pneumonia-causes-symptoms-types-treatment-prevention"
-              target="_blank"
-              rel="noopener"
-              color="inherit"
-              underline="hover"
-            >
-              ذات‌الریه
-            </Link>
-            شود، به‌ویژه در نوزادان، سالمندان و افرادی که سیستم ایمنی ضعیفی
-            دارند.
+            با این حال، دسترسی محدود به خدمات تخصصی در مناطق مختلف، هزینه‌های
+            بالای درمان، کمبود زمان کافی و تراکم کم جمعیت بیماران ام اس نسبت به
+            هر منطقه و عدم امکان نظارت دقیق بر وضعیت بیماران، از مشکلات رایج این
+            حوزه هستند.
           </Typography>
 
           <Button
             variant="contained"
             href="/rt-pcr-test-for-hmpv"
-            startIcon={<StarIcon />}
             component={motion.button}
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
             sx={{
               mt: 2,
-              backgroundImage:
-                "linear-gradient(to right, #4facfe 0%, #00f2fe 100%)",
+
               fontWeight: "bold",
               borderRadius: "24px",
               boxShadow: theme.shadows[2],
@@ -94,7 +83,7 @@ const HmpvSection = () => {
               },
             }}
           >
-            اطلاعات بیشتر درباره آزمایش RT-PCR برای HMPV
+            بیشتر بخوانید ...
           </Button>
         </Grid>
       </Grid>
