@@ -36,6 +36,7 @@ const HmpvSection = () => {
             padding: "4rem",
             bgcolor: "rgba(255,255,255,0.9)",
           }}
+          borderRadius="1rem 0 0 1rem"
         >
           <Typography
             variant="h3"

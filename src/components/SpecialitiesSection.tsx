@@ -7,7 +7,7 @@ const SpecialitiesSection: React.FC = () => {
       <Box
         sx={{
           textAlign: "center",
-          backgroundColor: "#91AEFD",
+          backgroundColor: "#79D7BE",
           padding: { xs: "2rem 1rem", sm: "3rem 2rem", md: "4rem 3rem" },
           position: "relative",
         }}
@@ -30,7 +30,7 @@ const SpecialitiesSection: React.FC = () => {
                 sx={{
                   fontSize: { xs: "27px", sm: "34px" },
                   fontWeight: 700,
-                  color: "#fff",
+                  color: "#000957",
                   display: "inline",
                 }}
               >
@@ -44,7 +44,7 @@ const SpecialitiesSection: React.FC = () => {
       <Box
         sx={{
           textAlign: "center",
-          backgroundColor: "#fff",
+          backgroundColor: "#FEF9E1",
           padding: { xs: "2rem 1rem", sm: "3rem 2rem", md: "4rem 3rem" },
           boxShadow: 3,
         }}

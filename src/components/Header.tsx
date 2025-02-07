@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
   return (
     <Box
       sx={{
-        background: "rgb(255, 255, 255)",
+        background: "background",
         display: "flex",
         alignItems: "center",
         maxWidth: "100",
@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
         <Box
           sx={{
             width: "100%",
-            bgcolor: "black",
+            bgcolor: "#000957",
             color: "white",
             display: "flex",
             justifyContent: "space-between",
@@ -64,7 +64,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
                 راهنمای بیمار
               </Button>
               <Button color="inherit" size="small">
-                رزرو بسته‌های سلامتی
+                رزرو بسته سلامتی
               </Button>
               <Button color="inherit" size="small">
                 ورود بیمار
@@ -121,7 +121,6 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
           sx={{
             backdropFilter: "blur(10px)",
             boxShadow: "none",
-            borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
             width: "100%",
           }}
         >
@@ -131,14 +130,15 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
               justifyContent: "space-between",
               px: 4,
               py: 1,
+              bgcolor: "#FF8000",
             }}
           >
             <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
               <Button color="inherit">خانه</Button>
               <Button color="inherit">درباره ما</Button>
               <Button color="inherit">تخصص‌ها</Button>
-              <Button color="inherit">پزشکان ما</Button>
-              <Button color="inherit">رزرو ویزیت</Button>
+              <Button color="inherit">پزشکان</Button>
+              <Button color="inherit">رزرو نوبت</Button>
               <Button color="inherit">نظرات شما</Button>
               <Button color="inherit">بیشتر</Button>
             </Box>

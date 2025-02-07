@@ -37,22 +37,14 @@ const BlogPostsGrid: React.FC<{ sections: BlogSection[] }> = ({ sections }) => {
       sx={{
         maxWidth: "100vw",
         overflow: "hidden",
-        backgroundColor: "background.paper",
+        backgroundColor: "#FEF9E1",
       }}
     >
       {sections.map((section) => (
         <Box key={section.id} sx={{ mb: 6 }}>
-          {/* <Typography
-            variant="h4"
-            gutterBottom
-            sx={{ px: 2, fontWeight: "bold" }}
-          >
-            {section.title}
-          </Typography> */}
           <Box
             sx={{
               textAlign: "center",
-              backgroundColor: "#f6f6f6", // Top section background color
               padding: { xs: "2rem 1rem", sm: "3rem 2rem", md: "4rem 3rem" }, // Adjust padding for responsiveness
               position: "relative",
             }}
@@ -76,7 +68,7 @@ const BlogPostsGrid: React.FC<{ sections: BlogSection[] }> = ({ sections }) => {
                     sx={{
                       fontSize: { xs: "27px", sm: "34px" },
                       fontWeight: 700,
-                      color: "#000", // White text for contrast against the blue background
+                      color: "#FF8000", // White text for contrast against the blue background
                       display: "inline",
                     }}
                   >
@@ -92,7 +84,6 @@ const BlogPostsGrid: React.FC<{ sections: BlogSection[] }> = ({ sections }) => {
             sx={{
               padding: "4rem",
               paddingTop: "0",
-              backgroundColor: "#f6f6f6", // Top section background color
             }}
           >
             {section.posts.map((post, index) => (

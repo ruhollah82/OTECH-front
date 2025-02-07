@@ -326,7 +326,7 @@ const PatientForm: React.FC = () => {
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
-              label="وضعیت راه رفتن و تعادل شما"
+              label="نحوه راه رفتن و تعادل"
               name="walkingBalanceStatus"
               variant="outlined"
               multiline
@@ -339,7 +339,7 @@ const PatientForm: React.FC = () => {
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
-              label="وضعیت خواب شما"
+              label="وضعیت خواب"
               name="sleepStatus"
               variant="outlined"
               multiline
@@ -352,7 +352,7 @@ const PatientForm: React.FC = () => {
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
-              label="وضعیت استرسی بدن شما"
+              label="سطح استرس بدن"
               name="stressLevel"
               variant="outlined"
               multiline
@@ -365,7 +365,7 @@ const PatientForm: React.FC = () => {
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
-              label="وضعیت کاری"
+              label="شغل"
               name="employmentStatus"
               variant="outlined"
               value={formData.employmentStatus}

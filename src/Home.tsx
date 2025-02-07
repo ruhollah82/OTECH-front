@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
-import Container from "./components/bgContainer";
 import SpecialityCare from "./components/SuperSpecialy";
 import ParallaxSection from "./components/Parallaxsection";
 import SpecialitiesSection from "./components/SpecialitiesSection";
@@ -10,6 +9,7 @@ import ArticleParent from "./components/ArticleParent";
 import StatsComponent from "./components/StatsComponent";
 import Footer from "./components/Footer";
 import DrawerComponent from "./components/DrawerComponent";
+import { Box, Container } from "@mui/material";
 
 const Home: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -38,7 +38,12 @@ const Home: React.FC = () => {
   }, [openDrawer]);
 
   return (
-    <Container>
+    <Box
+      sx={{
+        background:
+          "url('/media/Surgical-Technologist-blog-image-1.png') center/cover no-repeat fixed",
+      }}
+    >
       <Header toggleDrawer={toggleDrawer} />
       <DrawerComponent open={openDrawer} />
       <SpecialityCare />
@@ -49,7 +54,7 @@ const Home: React.FC = () => {
       <ArticleParent />
       <StatsComponent />
       <Footer />
-    </Container>
+    </Box>
   );
 };
 

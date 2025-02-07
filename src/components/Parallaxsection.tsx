@@ -4,7 +4,7 @@ const ParallaxSection = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#f6f6f6",
+        backgroundColor: "#FEF9E1",
         display: "flex",
         justifyContent: "center",
         px: 4,
@@ -22,7 +22,7 @@ const ParallaxSection = () => {
           px: 5,
           py: 8,
 
-          border: "8px solid #B7B7B7",
+          border: "8px solid #FF8000",
           backgroundImage: "url('/media/mm.jpg')",
           backgroundSize: "100vw",
           backgroundRepeat: "no-repeat",

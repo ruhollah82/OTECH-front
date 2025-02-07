@@ -5,30 +5,45 @@ import {
   MedicalServices,
   EmojiEvents,
 } from "@mui/icons-material";
+import { useTheme } from "@mui/material/styles"; // Import useTheme to access the theme
 
 const StatsComponent = () => {
+  const theme = useTheme(); // Access the theme
+
   return (
-    <Box>
+    <Box sx={{ overflow: "hidden" }}>
       <Grid
+        container
         justifyContent="center"
         spacing={4}
         sx={{
           py: "2rem",
           textAlign: "center",
-          backgroundColor: "rgb(48,76,153)",
+          backgroundColor: theme.palette.secondary.main, // Using Dark Blue from the theme
           gap: "2rem",
+          flexDirection: { xs: "column", md: "row" }, // Stack on small screens, row on medium and above
         }}
       >
+        {/* Item 1 */}
         <Grid item xs={6} md={2}>
           <Box sx={{ color: "white" }}>
-            <EmojiEmotions sx={{ fontSize: 64, color: "white" }} />
+            <EmojiEmotions
+              sx={{ fontSize: 64, color: theme.palette.primary.main }}
+            />
             <Typography
               variant="h2"
-              sx={{ mt: 2, color: "white", fontSize: { xs: 24, md: 32 } }}
+              sx={{
+                mt: 2,
+                color: theme.palette.primary.main,
+                fontSize: { xs: 24, md: 32 },
+              }}
             >
               3,12,338
             </Typography>
-            <Typography variant="body1" sx={{ color: "white", mt: 1 }}>
+            <Typography
+              variant="body1"
+              sx={{ color: theme.palette.primary.main, mt: 1 }}
+            >
               بیماران راضی
             </Typography>
           </Box>
@@ -36,16 +51,26 @@ const StatsComponent = () => {
 
         <Divider orientation="vertical" variant="middle" flexItem />
 
+        {/* Item 2 */}
         <Grid item xs={6} md={2}>
           <Box sx={{ color: "white" }}>
-            <LocalHospital sx={{ fontSize: 64, color: "white" }} />
+            <LocalHospital
+              sx={{ fontSize: 64, color: theme.palette.primary.main }}
+            />
             <Typography
               variant="h2"
-              sx={{ mt: 2, color: "white", fontSize: { xs: 24, md: 32 } }}
+              sx={{
+                mt: 2,
+                color: theme.palette.primary.main,
+                fontSize: { xs: 24, md: 32 },
+              }}
             >
               98,538
             </Typography>
-            <Typography variant="body1" sx={{ color: "white", mt: 1 }}>
+            <Typography
+              variant="body1"
+              sx={{ color: theme.palette.primary.main, mt: 1 }}
+            >
               جراحی‌های انجام‌شده
             </Typography>
           </Box>
@@ -53,16 +78,26 @@ const StatsComponent = () => {
 
         <Divider orientation="vertical" variant="middle" flexItem />
 
+        {/* Item 3 */}
         <Grid item xs={6} md={2}>
           <Box sx={{ color: "white" }}>
-            <MedicalServices sx={{ fontSize: 64, color: "white" }} />
+            <MedicalServices
+              sx={{ fontSize: 64, color: theme.palette.primary.main }}
+            />
             <Typography
               variant="h2"
-              sx={{ mt: 2, color: "white", fontSize: { xs: 24, md: 32 } }}
+              sx={{
+                mt: 2,
+                color: theme.palette.primary.main,
+                fontSize: { xs: 24, md: 32 },
+              }}
             >
               684
             </Typography>
-            <Typography variant="body1" sx={{ color: "white", mt: 1 }}>
+            <Typography
+              variant="body1"
+              sx={{ color: theme.palette.primary.main, mt: 1 }}
+            >
               کادر پزشکی
             </Typography>
           </Box>
@@ -70,26 +105,41 @@ const StatsComponent = () => {
 
         <Divider orientation="vertical" variant="middle" flexItem />
 
+        {/* Item 4 */}
         <Grid item xs={6} md={2}>
           <Box sx={{ color: "white" }}>
-            <EmojiEvents sx={{ fontSize: 64, color: "white" }} />
+            <EmojiEvents
+              sx={{ fontSize: 64, color: theme.palette.primary.main }}
+            />
             <Typography
               variant="h2"
-              sx={{ mt: 2, color: "white", fontSize: { xs: 24, md: 32 } }}
+              sx={{
+                mt: 2,
+                color: theme.palette.primary.main,
+                fontSize: { xs: 24, md: 32 },
+              }}
             >
               2011
             </Typography>
-            <Typography variant="body1" sx={{ color: "white", mt: 1 }}>
+            <Typography
+              variant="body1"
+              sx={{ color: theme.palette.primary.main, mt: 1 }}
+            >
               سال تأسیس
             </Typography>
           </Box>
         </Grid>
       </Grid>
 
+      {/* Section Below */}
       <Grid
         container
         justifyContent="center"
-        sx={{ py: 4, textAlign: "center", bgcolor: "rgb(247,167,7)" }}
+        sx={{
+          py: 4,
+          textAlign: "center",
+          bgcolor: theme.palette.primary.main, // Using the orange color from the theme
+        }}
       >
         <Grid item xs={12} md={8} sx={{ mb: { xs: 2, md: 0 } }}>
           <Typography
@@ -99,7 +149,7 @@ const StatsComponent = () => {
               fontWeight: "bold",
               fontSize: { xs: 26, md: 30 },
               lineHeight: 1.5,
-              color: "black",
+              color: theme.palette.secondary.main,
               mb: 2,
             }}
           >
@@ -108,7 +158,7 @@ const StatsComponent = () => {
           <Link
             href="/#reviews"
             sx={{
-              color: "black",
+              color: theme.palette.secondary.main,
               fontSize: 18,
               textDecoration: "none",
               "&:hover": { textDecoration: "underline" },
@@ -132,12 +182,12 @@ const StatsComponent = () => {
         >
           <Button
             variant="contained"
-            color="primary"
             href="/patient-feedback"
             sx={{
               borderRadius: "4px",
-              bgcolor: "white",
-              color: "black",
+              color: "white",
+              bgcolor: theme.palette.secondary.main,
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
               py: 1.5,
               px: 4,
               fontSize: 16,

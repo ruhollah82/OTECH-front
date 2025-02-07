@@ -10,11 +10,18 @@ import {
   Pinterest,
   Email,
 } from "@mui/icons-material";
+import { useTheme } from "@mui/material/styles"; // Import useTheme to access the theme
 
 const Footer: React.FC = () => {
+  const theme = useTheme(); // Access the theme
+
   return (
     <Box
-      sx={{ backgroundColor: "primary.dark", padding: "32px", color: "white" }}
+      sx={{
+        backgroundColor: theme.palette.secondary.dark, // Use primary dark color from the theme
+        padding: "32px",
+        color: "white",
+      }}
     >
       <Grid container spacing={4} justifyContent="center">
         <Grid item xs={12} sm={6} md={4}>
