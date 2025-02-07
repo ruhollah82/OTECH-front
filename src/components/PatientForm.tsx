@@ -38,16 +38,12 @@ const PatientForm: React.FC = () => {
     email: "",
     province: "",
     msType: "",
-    currentMedications: "",
     mobilityLevel: "",
-    familyHistoryOfMs: false,
-    nutritionStatus: "",
-    physicalActivityLevel: "",
+    familyHistoryOfMs: "",
+    walkingBalanceStatus: "",
     sleepStatus: "",
     stressLevel: "",
     employmentStatus: "",
-    job: "",
-    supportStatus: "",
     preferredContactMethod: "",
     agreementToTerms: false,
   });
@@ -135,7 +131,17 @@ const PatientForm: React.FC = () => {
               required
             />
           </Grid>
-
+          <Grid item xs={12} sm={6}>
+            <TextField
+              fullWidth
+              label="شماره ملی"
+              name="nationalId"
+              variant="outlined"
+              value={formData.nationalId}
+              onChange={handleChange}
+              required
+            />
+          </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
@@ -155,6 +161,34 @@ const PatientForm: React.FC = () => {
               onChange={handleChange}
               required
             />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormControl fullWidth>
+              <InputLabel>جنسیت</InputLabel>
+              <Select
+                name="gender"
+                value={formData.gender}
+                onChange={handleChange}
+                required
+              >
+                <MenuItem value="male">مرد</MenuItem>
+                <MenuItem value="female">زن</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormControl fullWidth>
+              <InputLabel>وضعیت تاهل</InputLabel>
+              <Select
+                name="maritalStatus"
+                value={formData.maritalStatus}
+                onChange={handleChange}
+                required
+              >
+                <MenuItem value="single">مجرد</MenuItem>
+                <MenuItem value="married">متاهل</MenuItem>
+              </Select>
+            </FormControl>
           </Grid>
 
           <Grid item xs={12} mt={4}>
@@ -211,6 +245,18 @@ const PatientForm: React.FC = () => {
               required
             />
           </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              fullWidth
+              label="استان محل سکونت"
+              name="province"
+              variant="outlined"
+              InputProps={{ sx: { borderRadius: 2 } }}
+              value={formData.province}
+              onChange={handleChange}
+              required
+            />
+          </Grid>
 
           <Grid item xs={12} mt={4}>
             <Typography
@@ -249,25 +295,82 @@ const PatientForm: React.FC = () => {
               </Select>
             </FormControl>
           </Grid>
-
-          <Grid item xs={12}>
+          <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
-              label="دارو های مورد استفاده فعلی"
-              name="currentMedications"
-              value={formData.currentMedications}
-              onChange={handleChange}
-              multiline
-              rows={3}
+              label="سطح تحرک بدن"
+              name="mobilityLevel"
               variant="outlined"
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  borderRadius: 2,
-                  "&:hover fieldset": {
-                    borderColor: theme.palette.primary.main,
-                  },
-                },
-              }}
+              multiline
+              rows={2}
+              value={formData.mobilityLevel}
+              onChange={handleChange}
+              required
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormControl fullWidth>
+              <InputLabel>سابقه خانوادگی ام اس</InputLabel>
+              <Select
+                name="familyHistoryOfMs"
+                value={formData.familyHistoryOfMs}
+                onChange={handleChange}
+                sx={{ borderRadius: 2 }}
+                required
+              >
+                <MenuItem value="yes">بله</MenuItem>
+                <MenuItem value="no">خیر</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              fullWidth
+              label="وضعیت راه رفتن و تعادل شما"
+              name="walkingBalanceStatus"
+              variant="outlined"
+              multiline
+              rows={2}
+              value={formData.walkingBalanceStatus}
+              onChange={handleChange}
+              required
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              fullWidth
+              label="وضعیت خواب شما"
+              name="sleepStatus"
+              variant="outlined"
+              multiline
+              rows={2}
+              value={formData.sleepStatus}
+              onChange={handleChange}
+              required
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              fullWidth
+              label="وضعیت استرسی بدن شما"
+              name="stressLevel"
+              variant="outlined"
+              multiline
+              rows={2}
+              value={formData.stressLevel}
+              onChange={handleChange}
+              required
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              fullWidth
+              label="وضعیت کاری"
+              name="employmentStatus"
+              variant="outlined"
+              value={formData.employmentStatus}
+              onChange={handleChange}
+              required
             />
           </Grid>
 
@@ -284,7 +387,7 @@ const PatientForm: React.FC = () => {
                   }}
                 />
               }
-              label="با شرایط و ضوابط موافقم"
+              label="اینجانب از درستی و صحت موارد فوق اطمینان دارم."
               sx={{ "& .MuiFormControlLabel-label": { fontWeight: 500 } }}
             />
           </Grid>
