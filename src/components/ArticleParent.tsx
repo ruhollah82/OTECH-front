@@ -8,6 +8,7 @@ import {
   Typography,
   keyframes,
 } from "@mui/material";
+import theme from "../theme";
 
 interface BlogPost {
   id: string;
@@ -37,7 +38,7 @@ const BlogPostsGrid: React.FC<{ sections: BlogSection[] }> = ({ sections }) => {
       sx={{
         maxWidth: "100vw",
         overflow: "hidden",
-        backgroundColor: "#FEF9E1",
+        backgroundColor: theme.palette.background.default,
       }}
     >
       {sections.map((section) => (
@@ -68,7 +69,7 @@ const BlogPostsGrid: React.FC<{ sections: BlogSection[] }> = ({ sections }) => {
                     sx={{
                       fontSize: { xs: "27px", sm: "34px" },
                       fontWeight: 700,
-                      color: "#FF8000", // White text for contrast against the blue background
+                      color: theme.palette.primary.main, // White text for contrast against the blue background
                       display: "inline",
                     }}
                   >

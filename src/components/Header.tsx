@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Search } from "@mui/icons-material";
+import theme from "../theme";
 
 interface HeaderProps {
   toggleDrawer: () => void;
@@ -28,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <img
           src="/media/logo.jpeg"
-          alt="بیمارستان‌های پِیس"
+          alt="OTECH-MS"
           style={{
             maxHeight: "10rem",
             width: "auto",

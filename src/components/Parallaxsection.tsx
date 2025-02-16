@@ -1,4 +1,5 @@
 import { Box, Typography, Divider } from "@mui/material";
+import theme from "../theme";
 
 const ParallaxSection = () => {
   return (
@@ -22,7 +23,8 @@ const ParallaxSection = () => {
           px: 5,
           py: 8,
 
-          border: "8px solid #FF8000",
+          border: "8px solid",
+          borderColor: theme.palette.primary.main,
           backgroundImage: "url('/media/mm.jpg')",
           backgroundSize: "100vw",
           backgroundRepeat: "no-repeat",

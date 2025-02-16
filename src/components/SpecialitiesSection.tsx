@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
+import theme from "../theme";
 
 const SpecialitiesSection: React.FC = () => {
   return (
@@ -7,7 +8,7 @@ const SpecialitiesSection: React.FC = () => {
       <Box
         sx={{
           textAlign: "center",
-          backgroundColor: "#79D7BE",
+          backgroundColor: theme.palette.info.main,
           padding: { xs: "2rem 1rem", sm: "3rem 2rem", md: "4rem 3rem" },
           position: "relative",
         }}
@@ -30,7 +31,7 @@ const SpecialitiesSection: React.FC = () => {
                 sx={{
                   fontSize: { xs: "27px", sm: "34px" },
                   fontWeight: 700,
-                  color: "#000957",
+                  color: theme.palette.secondary.main,
                   display: "inline",
                 }}
               >
