@@ -1,5 +1,4 @@
 import { Box, Typography, Button, keyframes } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
@@ -12,8 +11,6 @@ const float = keyframes`
 `;
 
 const ParallaxSection = () => {
-  const theme = useTheme();
-
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
@@ -97,6 +94,21 @@ const ParallaxSection = () => {
           }}
         >
           {/* Main Content */}
+          <Typography
+            variant="h1"
+            sx={{
+              background: "linear-gradient(45deg, #00ff87 30%, #60efff 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              fontSize: { xs: "2.5rem", md: "4rem" },
+              fontWeight: 800,
+              textAlign: "center",
+              mb: 2,
+              textShadow: "0 0 20px rgba(96,239,255,0.3)",
+            }}
+          >
+            OTech - MS
+          </Typography>
           <Typography
             variant="h1"
             sx={{

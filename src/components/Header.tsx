@@ -8,146 +8,199 @@ import {
   Box,
   Avatar,
   Typography,
+  keyframes,
 } from "@mui/material";
 import { Search } from "@mui/icons-material";
-import theme from "../theme";
 
 interface HeaderProps {
   toggleDrawer: () => void;
 }
 
+// A subtle floating animation for interactive elements
+const floatUp = keyframes`
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+`;
+
 const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
   return (
-    <Box
-      sx={{
-        background: "background",
-        display: "flex",
-        alignItems: "center",
-        maxWidth: "100",
-      }}
-    >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
-        <img
-          src="/media/logo.jpeg"
-          alt="OTECH-MS"
-          style={{
-            maxHeight: "10rem",
-            width: "auto",
-            objectFit: "contain",
-          }}
-        />
-      </Box>
-
-      <Box height="100%" sx={{ px: 0, py: 0, width: "100%" }}>
-        <Box
-          sx={{
-            width: "100%",
-            bgcolor: "#000957",
-            color: "white",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexWrap: "wrap",
-          }}
-        >
-          <Box
-            sx={{
-              padding: "1rem",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              flexWrap: "wrap",
-              width: "100%",
-            }}
-          >
-            <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
-              <Button color="inherit" size="small">
-                راهنمای بیمار
-              </Button>
-              <Button color="inherit" size="small">
-                رزرو بسته سلامتی
-              </Button>
-              <Button href="/login" color="inherit" size="small">
-                ورود بیمار
-              </Button>
-            </Box>
-
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  borderRadius: 24,
-                  bgcolor: "rgba(255, 255, 255, 0.2)",
-                  pl: 2,
-                  pr: 1,
-                  ml: 2,
+    <Box sx={{ position: "relative", zIndex: 10 }}>
+      <AppBar
+        position="sticky"
+        sx={{
+          background: "rgba(3, 0, 28, 0.8)",
+          backdropFilter: "blur(10px)",
+          boxShadow: "none",
+          borderBottom: "1px solid rgba(96,239,255,0.2)",
+        }}
+      >
+        <Toolbar sx={{ justifyContent: "space-between" }}>
+          {/* Logo & Title */}
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            <Box
+              sx={{
+                position: "relative",
+                padding: "1rem",
+                borderRadius: 2,
+                // background: "rgba(255,255,255,0.05)",
+                // backdropFilter: "blur(12px)",
+                // boxShadow: "0 0 20px rgba(96,239,255,0.3)",
+                // border: "1px solid rgba(96,239,255,0.2)",
+                "&::before": {
+                  content: '""',
+                  position: "absolute",
+                  inset: 0,
+                  borderRadius: 2,
+                  padding: "2px",
+                  // background: "linear-gradient(45deg, #60efff, #0061ff)",
+                  WebkitMask:
+                    "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  WebkitMaskComposite: "xor",
+                  maskComposite: "exclude",
+                },
+                // animation: `${floatUp} 3s ease-in-out infinite`,
+              }}
+            >
+              <img
+                src="/media/logo.jpeg"
+                alt="OTECH-MS"
+                style={{
+                  maxHeight: "60px",
+                  width: "auto",
+                  objectFit: "contain",
                 }}
-              >
-                <InputBase
-                  placeholder="جستجو..."
-                  inputProps={{ "aria-label": "Search" }}
-                  sx={{ color: "white", width: 200 }}
-                />
-                <IconButton aria-label="Search" sx={{ color: "white" }}>
-                  <Search fontSize="small" />
-                </IconButton>
-              </Box>
-
-              <Button
-                onClick={toggleDrawer}
-                sx={{
-                  color: "gray",
-                  textAlign: "center",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  gap: 2,
-                }}
-              >
-                <Typography variant="h6" sx={{ color: "white" }}>
-                  یونس قرایی
-                </Typography>
-                <Avatar
-                  alt="آواتار کاربر"
-                  src="/media/_______.jpeg"
-                  sx={{ width: 50, height: 50, marginBottom: "8px" }}
-                />
-              </Button>
+              />
             </Box>
+            <Typography
+              variant="h6"
+              sx={{
+                background: "linear-gradient(45deg, #00ff87, #60efff)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                fontWeight: 700,
+              }}
+            >
+              OTech - MS
+            </Typography>
           </Box>
-        </Box>
-
-        <AppBar
-          position="static"
-          color="transparent"
+          {/* Utility Links, Search Bar & User Info */}
+          <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
+            {/* Utility Links */}
+            <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
+              {["راهنمای بیمار", "رزرو بسته سلامتی", "ورود بیمار"].map(
+                (item, index) => (
+                  <Button
+                    key={index}
+                    href={item === "ورود بیمار" ? "/login" : undefined}
+                    sx={{
+                      color: "white",
+                      fontWeight: 500,
+                      "&:hover": {
+                        transform: "translateY(-2px)",
+                        boxShadow: "0 4px 10px rgba(96,239,255,0.3)",
+                      },
+                      transition: "all 0.3s ease",
+                    }}
+                  >
+                    {item}
+                  </Button>
+                )
+              )}
+            </Box>
+            {/* Search Box */}
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                background: "rgba(255,255,255,0.1)",
+                borderRadius: "24px",
+                pl: 2,
+                pr: 1,
+                border: "1px solid rgba(96,239,255,0.3)",
+                backdropFilter: "blur(6px)",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  boxShadow: "0 0 10px rgba(96,239,255,0.5)",
+                },
+              }}
+            >
+              <InputBase
+                placeholder="جستجو..."
+                inputProps={{ "aria-label": "search" }}
+                sx={{ color: "white", width: 200 }}
+              />
+              <IconButton aria-label="search" sx={{ color: "white" }}>
+                <Search fontSize="small" />
+              </IconButton>
+            </Box>
+            {/* User Info Button */}
+            <Button
+              onClick={toggleDrawer}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 1,
+                p: 1,
+                borderRadius: "16px",
+                background: "rgba(255,255,255,0.1)",
+                border: "1px solid rgba(96,239,255,0.3)",
+                backdropFilter: "blur(6px)",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  transform: "translateY(-2px)",
+                  boxShadow: "0 0 10px rgba(96,239,255,0.5)",
+                },
+              }}
+            >
+              <Typography variant="body1" sx={{ color: "white" }}>
+                یونس قرایی
+              </Typography>
+              <Avatar
+                alt="آواتار کاربر"
+                src="/media/_______.jpeg"
+                sx={{ width: 40, height: 40 }}
+              />
+            </Button>
+          </Box>
+        </Toolbar>
+        {/* Main Navigation */}
+        <Toolbar
           sx={{
-            backdropFilter: "blur(10px)",
-            boxShadow: "none",
-            width: "100%",
+            justifyContent: "center",
+            gap: 3,
+            borderTop: "1px solid rgba(96,239,255,0.2)",
+            bgcolor: "rgba(3, 0, 28, 0.9)",
+            py: 1,
           }}
         >
-          <Toolbar
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              px: 4,
-              py: 1,
-              bgcolor: "#F6F6F6",
-            }}
-          >
-            <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
-              <Button color="inherit">خانه</Button>
-              <Button color="inherit">درباره ما</Button>
-              <Button color="inherit">تخصص‌ها</Button>
-              <Button color="inherit">پزشکان</Button>
-              <Button color="inherit">رزرو نوبت</Button>
-              <Button color="inherit">نظرات شما</Button>
-              <Button color="inherit">بیشتر</Button>
-            </Box>
-          </Toolbar>
-        </AppBar>
-      </Box>
+          {[
+            "خانه",
+            "درباره ما",
+            "تخصص‌ها",
+            "پزشکان",
+            "رزرو نوبت",
+            "نظرات شما",
+            "بیشتر",
+          ].map((item, index) => (
+            <Button
+              key={index}
+              sx={{
+                color: "white",
+                fontWeight: 500,
+                "&:hover": {
+                  transform: "translateY(-2px)",
+                  boxShadow: "0 4px 10px rgba(96,239,255,0.3)",
+                },
+                transition: "all 0.3s ease",
+              }}
+            >
+              {item}
+            </Button>
+          ))}
+        </Toolbar>
+      </AppBar>
     </Box>
   );
 };

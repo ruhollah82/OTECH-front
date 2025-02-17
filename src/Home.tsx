@@ -46,7 +46,7 @@ const Home: React.FC = () => {
     >
       <Header toggleDrawer={toggleDrawer} />
       <DrawerComponent open={openDrawer} />
-      <SpecialityCare />
+      {/* <SpecialityCare /> */}
       <ParallaxSection />
       <SpecialitiesSection />
       {/* <AccordionGparent /> */}
