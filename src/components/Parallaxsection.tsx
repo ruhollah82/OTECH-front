@@ -1,99 +1,166 @@
-import { Box, Typography, Divider } from "@mui/material";
-import theme from "../theme";
+import { Box, Typography, Button, keyframes } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
+import { useCallback } from "react";
+import type { Engine } from "tsparticles-engine";
+
+const float = keyframes`
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+`;
 
 const ParallaxSection = () => {
+  const theme = useTheme();
+
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadSlim(engine);
+  }, []);
+
   return (
     <Box
       sx={{
-        backgroundColor: "#FEF9E1",
+        position: "relative",
+        minHeight: "100vh",
         display: "flex",
+        alignItems: "center",
         justifyContent: "center",
-        px: 4,
-        paddingTop: "8rem",
+        background:
+          "radial-gradient(circle at center, #0f0c29 0%, #03001C 100%)",
+        overflow: "hidden",
       }}
     >
+      {/* Subtle Particles Layer */}
+      <Box
+        sx={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          opacity: 0.3,
+        }}
+      >
+        <Particles
+          init={particlesInit}
+          options={{
+            fullScreen: false,
+            particles: {
+              number: { value: 40 },
+              color: { value: "#60efff" },
+              shape: { type: "circle" },
+              opacity: { value: 0.4 },
+              size: { value: { min: 1, max: 3 } },
+              move: {
+                enable: true,
+                speed: 0.5,
+                direction: "none",
+                outModes: "bounce",
+              },
+            },
+          }}
+        />
+      </Box>
+
+      {/* Central Floating Element */}
       <Box
         sx={{
           position: "relative",
-          top: "-12rem",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          px: 5,
-          py: 8,
-
-          border: "8px solid",
-          borderColor: theme.palette.primary.main,
-          backgroundImage: "url('/media/mm.jpg')",
-          backgroundSize: "100vw",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center -5rem",
-
-          "&::before": {
-            content: '""',
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
-          },
+          zIndex: 2,
+          textAlign: "center",
+          animation: `${float} 6s infinite ease-in-out`,
         }}
       >
-        <Typography
-          variant="h2"
+        {/* Glowing Border Effect */}
+        <Box
           sx={{
-            fontSize: { xs: 36, md: 56 },
-            color: "white",
-            fontWeight: "bold",
             position: "relative",
+            padding: 4,
+            borderRadius: 4,
+            background: "rgba(255,255,255,0.05)",
+            backdropFilter: "blur(12px)",
+            boxShadow: "0 0 40px rgba(96,239,255,0.1)",
+            border: "1px solid rgba(96,239,255,0.2)",
+            transformStyle: "preserve-3d",
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              inset: 0,
+              borderRadius: 4,
+              padding: "2px",
+              background: "linear-gradient(45deg, #60efff, #0061ff)",
+              WebkitMask:
+                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+              mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+              WebkitMaskComposite: "xor",
+              maskComposite: "exclude",
+            },
           }}
         >
-          پلتفرم هوشمند بیماران MS
-        </Typography>
-        <Typography
-          variant="h3"
-          sx={{
-            fontSize: { xs: 30, md: 40 },
-            color: "#FFE9AA",
-            mt: 3,
-            textAlign: "center",
-            position: "relative",
-          }}
-        >
-          ارائه راه حل های نوآورانه برای بیماران MS
-        </Typography>
+          {/* Main Content */}
+          <Typography
+            variant="h1"
+            sx={{
+              fontSize: { xs: "2.5rem", md: "4rem" },
+              fontWeight: 800,
+              background: "linear-gradient(45deg, #60efff 30%, #0061ff 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              lineHeight: 1.2,
+              mb: 2,
+              textShadow: "0 0 20px rgba(96,239,255,0.3)",
+            }}
+          >
+            هوش مصنوعی در خدمت سلامت
+          </Typography>
 
-        <Divider
-          sx={{ width: "70%", my: 4, borderWidth: "3px", borderColor: "grey" }}
+          <Typography
+            variant="subtitle1"
+            sx={{
+              fontSize: "1.2rem",
+              color: "rgba(255,255,255,0.9)",
+              maxWidth: "600px",
+              mx: "auto",
+              mb: 4,
+            }}
+          >
+            اولین پلتفرم ترکیبی مدیریت بیماری MS با قابلیت‌های پیشرفته تشخیصی و
+            تحلیل هوشمند تصاویر پزشکی
+          </Typography>
+
+          <Button
+            variant="contained"
+            size="large"
+            sx={{
+              px: 6,
+              py: 1.5,
+              fontSize: "1.1rem",
+              background: "linear-gradient(45deg, #60efff 0%, #0061ff 100%)",
+              border: "1px solid rgba(255,255,255,0.3)",
+              "&:hover": {
+                transform: "translateY(-2px)",
+                boxShadow: "0 10px 20px rgba(96,239,255,0.3)",
+              },
+              transition: "all 0.3s ease",
+            }}
+          >
+            کشف پلتفرم
+          </Button>
+        </Box>
+
+        {/* Subtle Background Elements */}
+        <Box
+          sx={{
+            position: "absolute",
+            width: "600px",
+            height: "600px",
+            background:
+              "radial-gradient(circle, rgba(96,239,255,0.08) 0%, transparent 70%)",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: -1,
+          }}
         />
-        <Typography
-          variant="h4"
-          sx={{
-            fontSize: { xs: 24, md: 36 },
-            fontWeight: "bold",
-            color: "white",
-            position: "relative",
-          }}
-        >
-          اولین مرکز ارائه خدمات هوشمند
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            fontSize: { xs: 18, md: 22 },
-            color: "white",
-            textAlign: "center",
-            maxWidth: "900px",
-            mt: 3,
-            position: "relative",
-          }}
-        >
-          این پروژه بستری مبتنی بر هوش مصنوعی برای بیماران مبتلا به ام اس است که
-          خدمات مورد نیاز انان را با استفاده از پردازش تصویر و یادگیری ماشین
-          ارایه میدهد
-        </Typography>
       </Box>
     </Box>
   );

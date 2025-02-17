@@ -9,7 +9,7 @@ import ArticleParent from "./components/ArticleParent";
 import StatsComponent from "./components/StatsComponent";
 import Footer from "./components/Footer";
 import DrawerComponent from "./components/DrawerComponent";
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 
 const Home: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
       <SpecialityCare />
       <ParallaxSection />
       <SpecialitiesSection />
-      <AccordionGparent />
+      {/* <AccordionGparent /> */}
       <HmpvSection />
       <ArticleParent />
       <StatsComponent />

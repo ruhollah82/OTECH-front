@@ -8,9 +8,28 @@ import {
   Avatar,
   Typography,
   Box,
+  IconButton,
+  styled,
+  keyframes,
+  Button,
 } from "@mui/material";
+import {
+  AccountCircle,
+  Assignment,
+  ExitToApp,
+  ChevronLeft,
+} from "@mui/icons-material";
 
-const drawerWidth = 240;
+const float = keyframes`
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+`;
+
+const GradientDivider = styled(Divider)(({ theme }) => ({
+  background: `linear-gradient(90deg, transparent 0%, ${theme.palette.primary.main} 50%, transparent 100%)`,
+  height: "2px",
+}));
 
 interface DrawerComponentProps {
   open: boolean;
@@ -21,15 +40,17 @@ const DrawerComponent = forwardRef<HTMLDivElement, DrawerComponentProps>(
     return (
       <Drawer
         sx={{
-          width: drawerWidth,
+          width: 300,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: drawerWidth,
-            boxSizing: "border-box",
-            borderRadius: "0px",
-            background: "rgba(0, 0, 0, 0.9)",
-            backdropFilter: "blur(8px)",
-            boxShadow: "0 2px 12px rgba(0, 0, 0, 0.3)",
+            width: 300,
+            background: "rgba(15, 13, 41, 0.95)",
+            backdropFilter: "blur(12px)",
+            borderLeft: `1px solid rgba(255,255,255,0.1)`,
+            boxShadow: "0 0 40px rgba(96,239,255,0.1)",
+            "&:hover": {
+              boxShadow: "0 0 60px rgba(96,239,255,0.2)",
+            },
           },
         }}
         variant="persistent"
@@ -37,95 +58,122 @@ const DrawerComponent = forwardRef<HTMLDivElement, DrawerComponentProps>(
         open={open}
         ref={ref}
       >
-        {/* Account Info */}
-        <Box sx={{ padding: "16px", textAlign: "center" }}>
+        {/* Header Section */}
+        <Box sx={{ p: 3, position: "relative" }}>
+          <IconButton
+            sx={{
+              position: "absolute",
+              left: 16,
+              top: 16,
+              color: "rgba(255,255,255,0.8)",
+            }}
+          >
+            <ChevronLeft fontSize="large" />
+          </IconButton>
           <Avatar
             alt="User Avatar"
             src="/media/_______.jpeg"
             sx={{
               width: 100,
               height: 100,
-              marginBottom: "8px",
-              borderRadius: "50%",
-              border: "3px solid #fff",
+              border: "3px solid",
+              borderColor: "primary.main",
+              boxShadow: "0 0 20px rgba(96,239,255,0.3)",
+              "&:hover": {
+                animation: `${float} 2s infinite ease-in-out`,
+              },
             }}
           />
-          <Typography variant="h6" sx={{ color: "#fff", fontWeight: 500 }}>
+          <Typography
+            variant="h6"
+            sx={{
+              mt: 2,
+              background: "linear-gradient(45deg, #00ff87 30%, #60efff 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              fontWeight: 700,
+            }}
+          >
             یونس قرایی
           </Typography>
-          <Divider sx={{ margin: "8px 0", backgroundColor: "#444" }} />
-          <Typography variant="h6" sx={{ color: "#fff", fontWeight: 500 }}>
+          <Typography
+            variant="body2"
+            sx={{
+              color: "rgba(255,255,255,0.7)",
+              mt: 0.5,
+            }}
+          >
             RRPM14035456
           </Typography>
         </Box>
-        <Divider sx={{ margin: "8px 0", backgroundColor: "#444" }} />
 
-        {/* Dashboard Links */}
-        <List>
-          <ListItem
-            component="button"
-            sx={{
-              padding: "12px 16px",
-              borderRadius: "8px",
-              backgroundColor: "transparent",
-              color: "#ddd",
-              marginBottom: "12px", // فاصله بین آیتم‌ها
-              display: "flex",
-              alignItems: "center",
-              "&:hover": {
-                backgroundColor: "#333",
-                color: "#fff",
-              },
-            }}
-          >
-            <ListItemText
-              primary="اطلاعات بیمار"
-              sx={{ fontWeight: 500, fontSize: "16px" }}
-            />
-          </ListItem>
-          <ListItem
-            component="button"
-            sx={{
-              padding: "12px 16px",
-              borderRadius: "8px",
-              backgroundColor: "transparent",
-              color: "#ddd",
-              marginBottom: "12px",
-              display: "flex",
-              alignItems: "center",
-              "&:hover": {
-                backgroundColor: "#333",
-                color: "#fff",
-              },
-            }}
-          >
-            <ListItemText
-              primary="فعالیت های بیمار"
-              sx={{ fontWeight: 500, fontSize: "16px" }}
-            />
-          </ListItem>
-          <ListItem
-            component="button"
-            sx={{
-              padding: "12px 16px",
-              borderRadius: "8px",
-              backgroundColor: "transparent",
-              color: "#ddd",
-              marginBottom: "12px",
-              display: "flex",
-              alignItems: "center",
-              "&:hover": {
-                backgroundColor: "#333",
-                color: "#fff",
-              },
-            }}
-          >
-            <ListItemText
-              primary="خروج از حساب"
-              sx={{ fontWeight: 500, fontSize: "16px" }}
-            />
-          </ListItem>
+        <GradientDivider />
+
+        {/* Navigation Items */}
+        <List sx={{ p: 2 }}>
+          {[
+            { text: "اطلاعات بیمار", icon: <AccountCircle sx={{ ml: 1 }} /> },
+            { text: "فعالیت های بیمار", icon: <Assignment sx={{ ml: 1 }} /> },
+            { text: "خروج از حساب", icon: <ExitToApp sx={{ ml: 1 }} /> },
+          ].map((item, index) => (
+            <ListItem
+              key={item.text}
+              component={Button}
+              sx={{
+                borderRadius: 2,
+                mb: 1,
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  background:
+                    "linear-gradient(90deg, rgba(96,239,255,0.1) 0%, transparent 100%)",
+                  transform: "translateX(-5px)",
+                },
+                ...(index === 2 && {
+                  background:
+                    "linear-gradient(90deg, rgba(255,0,87,0.1) 0%, transparent 100%)",
+                  "&:hover": {
+                    background:
+                      "linear-gradient(90deg, rgba(255,0,87,0.2) 0%, transparent 100%)",
+                  },
+                }),
+              }}
+            >
+              {item.icon}
+              <ListItemText
+                primary={item.text}
+                sx={{
+                  "& .MuiTypography-root": {
+                    color: index === 2 ? "#ff0057" : "rgba(255,255,255,0.9)",
+                    fontWeight: 500,
+                    fontSize: "1.1rem",
+                  },
+                }}
+              />
+            </ListItem>
+          ))}
         </List>
+
+        {/* Footer */}
+        <Box sx={{ mt: "auto", p: 2, textAlign: "center" }}>
+          <Typography
+            variant="caption"
+            sx={{
+              color: "rgba(255,255,255,0.5)",
+              display: "block",
+            }}
+          >
+            نسخه ۲.۴.۱
+          </Typography>
+          <Typography
+            variant="caption"
+            sx={{
+              color: "rgba(255,255,255,0.3)",
+              display: "block",
+            }}
+          >
+            © ۲۰۲۳ OTECH-MS
+          </Typography>
+        </Box>
       </Drawer>
     );
   }

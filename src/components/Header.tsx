@@ -67,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
               <Button color="inherit" size="small">
                 رزرو بسته سلامتی
               </Button>
-              <Button color="inherit" size="small">
+              <Button href="/login" color="inherit" size="small">
                 ورود بیمار
               </Button>
             </Box>

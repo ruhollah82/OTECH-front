@@ -16,7 +16,6 @@ import { red } from "@mui/material/colors";
 import { Favorite, Share, Bookmark } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { articlesAAR } from "./articles";
-import HtmlRenderer from "./MarkDownRenderer";
 
 interface Article {
   id: number;
@@ -106,7 +105,6 @@ const ArticlePage: React.FC = () => {
                       </Typography>
                     </div>
                   </div>
-                  <HtmlRenderer html={article.content} />
                 </CardContent>
                 <div
                   style={{

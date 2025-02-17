@@ -21,7 +21,7 @@ const theme = createTheme({
       contrastText: "#FFFFFF",
     },
     background: {
-      default: "#F5F5F5", // Light gray instead of blue for better neutrality
+      default: "rgb(245, 245, 245)", // Light gray instead of blue for better neutrality
       paper: "#FFFFFF", // Added paper color for surfaces
     },
     text: {

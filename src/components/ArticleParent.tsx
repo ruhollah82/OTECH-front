@@ -9,16 +9,16 @@ import {
   keyframes,
 } from "@mui/material";
 import theme from "../theme";
+import { articlesAAR } from "./articles";
 
 interface BlogPost {
-  id: string;
-  imageUrl: string;
+  id: number;
   title: string;
-  href: string;
+  content: string;
+  image: string;
   author: string;
   date: string;
-  description: string;
-  tags: string[];
+  avatar: string;
 }
 
 interface BlogSection {
@@ -44,54 +44,25 @@ const BlogPostsGrid: React.FC<{ sections: BlogSection[] }> = ({ sections }) => {
       {sections.map((section) => (
         <Box key={section.id} sx={{ mb: 6 }}>
           <Box
-            sx={{
-              textAlign: "center",
-              padding: { xs: "2rem 1rem", sm: "3rem 2rem", md: "4rem 3rem" }, // Adjust padding for responsiveness
-              position: "relative",
-            }}
+            sx={{ textAlign: "center", padding: "3rem", position: "relative" }}
           >
-            <Grid container spacing={0}>
-              <Grid item xs={12}>
-                <Box
-                  id="1912756758"
-                  sx={{
-                    transitionDuration: "1s",
-                    transitionTimingFunction: "ease-in-out",
-                    transitionDelay: "initial",
-                    transitionProperty: "opacity",
-                    lineHeight: "initial",
-                  }}
-                  data-element-type="paragraph"
-                  data-version="5"
-                >
-                  <Typography
-                    variant="h2"
-                    sx={{
-                      fontSize: { xs: "27px", sm: "34px" },
-                      fontWeight: 700,
-                      color: theme.palette.primary.main, // White text for contrast against the blue background
-                      display: "inline",
-                    }}
-                  >
-                    تازه ها و مقالات سلامتی
-                  </Typography>
-                </Box>
-              </Grid>
-            </Grid>
+            <Typography
+              variant="h2"
+              sx={{
+                fontSize: { xs: "27px", sm: "34px" },
+                fontWeight: 700,
+                color: theme.palette.primary.main,
+              }}
+            >
+              {section.title}
+            </Typography>
           </Box>
-          <Grid
-            container
-            spacing={3}
-            sx={{
-              padding: "4rem",
-              paddingTop: "0",
-            }}
-          >
+          <Grid container spacing={3} sx={{ padding: "4rem", paddingTop: "0" }}>
             {section.posts.map((post, index) => (
               <Grid item xs={12} sm={6} md={4} key={post.id}>
                 <Box
                   component="a"
-                  href={post.href}
+                  href={`/article/${post.id}`}
                   sx={{
                     textDecoration: "none",
                     color: "inherit",
@@ -105,7 +76,7 @@ const BlogPostsGrid: React.FC<{ sections: BlogSection[] }> = ({ sections }) => {
                   <Card sx={{ borderRadius: 3 }}>
                     <CardMedia
                       component="img"
-                      image={post.imageUrl}
+                      image={post.image}
                       alt={post.title}
                       sx={{
                         height: 200,
@@ -129,79 +100,11 @@ const BlogPostsGrid: React.FC<{ sections: BlogSection[] }> = ({ sections }) => {
   );
 };
 
-// Sample posts added to the blogSections array
 const blogSections: BlogSection[] = [
   {
-    id: "world-health-days",
-    title: "World Health Days",
-    posts: [
-      {
-        id: "ntd-day",
-        imageUrl: "/media/1398102214084736519390724.jpg",
-        title: "عوارض دارویی در بیماران ام اس",
-        href: "/wwww",
-        author: "lllllll",
-        date: "28 ژانویه 2025",
-        description: "description",
-        tags: ["روزهای سلامت جهانی"],
-      },
-      {
-        id: "ntd-day",
-        imageUrl: "/media/CbVqqMH7iz1M.jpg",
-        title: "بهترین زمان های خواب برای بیماران ام اس و اختلالات خواب",
-        href: "/world-ntd-day",
-        author: "بیمارستان‌های پیس",
-        date: "28 ژانویه 2025",
-        description:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
-        tags: ["روزهای سلامت جهانی"],
-      },
-      {
-        id: "ntd-day",
-        imageUrl: "/media/qgcyifts74ai.jpeg",
-        title: "رژیم غذایی در بیماران مبتلا به ام اس",
-        href: "/world-ntd-day",
-        author: "بیمارستان‌های پیس",
-        date: "28 ژانویه 2025",
-        description:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
-        tags: ["روزهای سلامت جهانی"],
-      },
-      {
-        id: "ntd-day",
-        imageUrl: "/media/iStock-1275708191.jpg",
-        title: "تاثیر ورزشدر سلامتی بیماران ام اس",
-        href: "/world-ntd-day",
-        author: "بیمارستان‌های پیس",
-        date: "28 ژانویه 2025",
-        description:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
-        tags: ["روزهای سلامت جهانی"],
-      },
-      {
-        id: "ntd-day",
-        imageUrl: "/media/Coronavirus_2019-nCoV_1000x500.jpg",
-        title: "بیماری های واگیر خطرناک برای بیماران ام اس",
-        href: "/world-ntd-day",
-        author: "بیمارستان‌های پیس",
-        date: "28 ژانویه 2025",
-        description:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
-        tags: ["روزهای سلامت جهانی"],
-      },
-      {
-        id: "ntd-day",
-        imageUrl:
-          "/media/3d-cartoon-planet-earth-and-location-pin-isolated-render-world-map-silhouette-planet-icon-cartography-and-geography-earth-day-travel-destination-holiday-and-transportation-vector.jpg",
-        title: "بهترین مناطق برای زندگی بیماران ام اس",
-        href: "/world-ntd-day",
-        author: "بیمارستان‌های پیس",
-        date: "28 ژانویه 2025",
-        description:
-          "روز جهانی بیماری‌های گرمسیری فراموش‌شده (World NTD Day) یک رویداد بهداشتی جهانی است که هر سال در ۳۰ ژانویه برگزار می‌شود...",
-        tags: ["روزهای سلامت جهانی"],
-      },
-    ],
+    id: "1",
+    title: "تازه ها و مقالات سلامتی",
+    posts: articlesAAR,
   },
 ];
 
