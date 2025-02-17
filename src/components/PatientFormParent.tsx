@@ -1,14 +1,12 @@
+import { Box } from "@mui/material";
 import PatientForm from "./PatientForm";
+import theme from "../theme";
 
 const PatientFormParent = () => {
   return (
-    <div
-      style={{
-        width: "100vw",
-      }}
-    >
+    <Box sx={{ bgcolor: theme.palette.background.default }}>
       <PatientForm />
-    </div>
+    </Box>
   );
 };
 
