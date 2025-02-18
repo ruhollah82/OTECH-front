@@ -41,7 +41,7 @@ const Home: React.FC = () => {
     <Box
       sx={{
         background:
-          "url('/media/Surgical-Technologist-blog-image-1.png') center/cover no-repeat fixed",
+          "url('/media/robotic-artificial-intelligence-digital-technology-concept-with-robot-free-vector.jpg') center/cover no-repeat fixed",
       }}
     >
       <Header toggleDrawer={toggleDrawer} />

@@ -32,7 +32,7 @@ const SpecialitiesSection: React.FC = () => {
   const services = [
     {
       icon: <MedicalServices sx={{ fontSize: 50 }} />,
-      title: "مراقبت هوشمند",
+      title: "تست گیت",
       description: "سیستم نظارت پیشرفته با قابلیت آنالیز لحظه‌ای وضعیت بیمار",
     },
     {
