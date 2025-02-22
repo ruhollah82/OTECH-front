@@ -9,7 +9,7 @@ import {
   Avatar,
   Typography,
 } from "@mui/material";
-import { Search, Menu } from "@mui/icons-material";
+import { Search } from "@mui/icons-material";
 
 interface HeaderProps {
   toggleDrawer: () => void;
@@ -27,15 +27,15 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
       }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between", px: 2 }}>
-        {/* Left Section */}
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          {/* <IconButton sx={{ color: "white" }}>
-            <Menu fontSize="medium" />
-          </IconButton> */}
           <img
-            src="/media/logo.jpeg"
+            src="/media/croppedLogo.png"
             alt="OTECH-MS"
-            style={{ height: "40px", objectFit: "contain" }}
+            style={{
+              height: "64px",
+              objectFit: "contain",
+              padding: "0.5rem",
+            }}
           />
           <Typography
             variant="h6"
@@ -50,8 +50,6 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
             OTech - MS
           </Typography>
         </Box>
-
-        {/* Center Navigation */}
         <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
           {["خانه", "تخصص‌ها", "پزشکان", "رزرو نوبت", "نظرات شما"].map(
             (item) => (
@@ -74,7 +72,6 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
           )}
         </Box>
 
-        {/* Right Section */}
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
           <Box
             sx={{
