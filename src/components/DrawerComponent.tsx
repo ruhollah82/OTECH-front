@@ -72,7 +72,7 @@ const DrawerComponent = forwardRef<HTMLDivElement, DrawerComponentProps>(
           </IconButton>
           <Avatar
             alt="User Avatar"
-            src="/media/_______.jpeg"
+            src="/media/younes.jpeg"
             sx={{
               width: 100,
               height: 100,

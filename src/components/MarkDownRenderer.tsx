@@ -45,7 +45,15 @@ const StyledPre = styled("pre")({
 
 const MarkdownRenderer: React.FC<{ markdown: string }> = ({ markdown }) => {
   return (
-    <Box sx={{ typography: "body1", p: 2, maxWidth: "800px", margin: "auto" }}>
+    <Box
+      sx={{
+        typography: "body1",
+        p: 2,
+        maxWidth: "800px",
+        margin: "auto",
+        textAlign: "left",
+      }}
+    >
       <ReactMarkdown
         components={{
           h1: ({ children }) => (

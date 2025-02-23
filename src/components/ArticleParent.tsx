@@ -12,6 +12,7 @@ import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
 import type { Engine } from "tsparticles-engine";
 import { articlesAAR } from "./articles";
+import MarkdownRenderer from "./MarkDownRenderer";
 
 interface BlogPost {
   id: number;
@@ -198,7 +199,7 @@ const BlogPostsGrid: React.FC<{ sections: BlogSection[] }> = ({ sections }) => {
                       >
                         {post.title}
                       </Typography>
-                      <Typography
+                      {/* <Typography
                         variant="body2"
                         sx={{
                           color: "rgba(255,255,255,0.8)",
@@ -207,8 +208,11 @@ const BlogPostsGrid: React.FC<{ sections: BlogSection[] }> = ({ sections }) => {
                           mb: 2,
                         }}
                       >
-                        {post.content.substring(0, 100)}...
-                      </Typography>
+                        <MarkdownRenderer
+                          markdown={post.content.substring(0, 100)}
+                        />
+                        ...
+                      </Typography> */}
                       <Button
                         variant="text"
                         size="small"

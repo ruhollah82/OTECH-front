@@ -101,7 +101,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
           <IconButton onClick={toggleDrawer} sx={{ p: 0.5 }}>
             <Avatar
               alt="آواتار کاربر"
-              src="/media/_______.jpeg"
+              src="/media/younes.jpeg"
               sx={{ width: 32, height: 32 }}
             />
           </IconButton>
