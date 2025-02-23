@@ -22,12 +22,6 @@ import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
 import type { Engine } from "tsparticles-engine";
 
-const float = keyframes`
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
-`;
-
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -65,7 +59,6 @@ const ArticlePage: React.FC = () => {
         overflow: "hidden",
       }}
     >
-      {/* Particles Background */}
       <Box
         sx={{
           position: "absolute",
