@@ -8,7 +8,6 @@ import StatsComponent from "./components/StatsComponent";
 import Footer from "./components/Footer";
 import DrawerComponent from "./components/DrawerComponent";
 import { Box } from "@mui/material";
-import CameraStreamer from "./components/GateTest";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
 
@@ -59,7 +58,6 @@ const Home: React.FC = () => {
         <SpecialitiesSection />
         <HmpvSection />
         <ArticleParent />
-        <CameraStreamer />
         <StatsComponent />
         <Footer />
       </Box>

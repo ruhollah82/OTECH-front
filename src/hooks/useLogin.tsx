@@ -27,6 +27,9 @@ const useLogin = () => {
         "http://localhost:8000/api/patients/login/",
         formData
       );
+      console.log("uselogin : ", formData);
+      console.log("uselogin : ", data);
+
       if (data.token) {
         setToken(data.token);
       }

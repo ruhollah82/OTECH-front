@@ -71,7 +71,7 @@ const useRegister = () => {
         "http://localhost:8000/api/patients/",
         mappedData
       );
-      console.log("register responseee: ", data);
+      console.log("register responseee: ", mappedData);
 
       setSuccess(true);
       const loginresponse = await loginUser({

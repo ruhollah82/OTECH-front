@@ -7,6 +7,7 @@ import {
   ConnectWithoutContact,
   Psychology,
 } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const float = keyframes`
   0% { transform: translateY(0px); }
@@ -34,22 +35,26 @@ const SpecialitiesSection: React.FC = () => {
       icon: <MedicalServices sx={{ fontSize: 50 }} />,
       title: "تست گیت",
       description: "سیستم نظارت پیشرفته با قابلیت آنالیز لحظه‌ای وضعیت بیمار",
+      href: "/gatetest",
     },
     {
       icon: <HealthAndSafety sx={{ fontSize: 50 }} />,
       title: "پیشگیری پیشرفته",
       description:
         "تشخیص زودهنگام و پیشگیری از پیشرفت بیماری با الگوریتم‌های هوشمند",
+      href: "/#",
     },
     {
       icon: <ConnectWithoutContact sx={{ fontSize: 50 }} />,
       title: "ارتباط مستقیم",
       description: "ارتباط بی‌واسطه با بهترین متخصصین ام اس در سراسر کشور",
+      href: "/#",
     },
     {
       icon: <Psychology sx={{ fontSize: 50 }} />,
       title: "پشتیبانی روانشناسی",
       description: "برنامه‌های مراقبت روانی تخصصی برای بیماران و همراهان",
+      href: "/#",
     },
   ];
 
@@ -113,36 +118,38 @@ const SpecialitiesSection: React.FC = () => {
 
         {services.map((service, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
-            <GradientCard>
-              <Box
-                sx={{
-                  color: theme.palette.primary.main,
-                  mb: 2,
-                  animation: `${float} 4s infinite ease-in-out`,
-                }}
-              >
-                {service.icon}
-              </Box>
-              <Typography
-                variant="h5"
-                sx={{
-                  color: "white",
-                  fontWeight: 700,
-                  mb: 1.5,
-                }}
-              >
-                {service.title}
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{
-                  color: "rgba(255,255,255,0.8)",
-                  lineHeight: 1.8,
-                }}
-              >
-                {service.description}
-              </Typography>
-            </GradientCard>
+            <Link to={service.href} style={{ textDecoration: "none" }}>
+              <GradientCard>
+                <Box
+                  sx={{
+                    color: theme.palette.primary.main,
+                    mb: 2,
+                    animation: `${float} 4s infinite ease-in-out`,
+                  }}
+                >
+                  {service.icon}
+                </Box>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: "white",
+                    fontWeight: 700,
+                    mb: 1.5,
+                  }}
+                >
+                  {service.title}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: "rgba(255,255,255,0.8)",
+                    lineHeight: 1.8,
+                  }}
+                >
+                  {service.description}
+                </Typography>
+              </GradientCard>
+            </Link>
           </Grid>
         ))}
       </Grid>

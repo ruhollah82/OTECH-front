@@ -70,7 +70,7 @@ const PatientForm: React.FC = () => {
     setFormData({ ...formData, [event.target.name]: event.target.checked });
   };
 
-  const { registerUser, loading, error, success } = useRegister();
+  const { registerUser } = useRegister();
 
   const handleSubmit = (event: React.FormEvent) => {
     console.log(formData);
