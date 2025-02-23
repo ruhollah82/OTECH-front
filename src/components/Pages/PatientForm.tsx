@@ -25,9 +25,9 @@ import {
   MedicalInformation,
 } from "@mui/icons-material";
 import { SelectChangeEvent } from "@mui/material";
-import useRegister from "../hooks/useRegister";
+import useRegister from "../../hooks/useRegister";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 
 const PatientForm: React.FC = () => {
   const theme = useTheme();

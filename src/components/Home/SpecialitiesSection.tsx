@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Grid, Card, styled, keyframes } from "@mui/material";
-import theme from "../theme";
+import theme from "../../theme";
 import {
   MedicalServices,
   HealthAndSafety,

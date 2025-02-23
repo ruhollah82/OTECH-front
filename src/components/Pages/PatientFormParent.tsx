@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import PatientForm from "./PatientForm";
-import theme from "../theme";
+import theme from "../../theme";
 
 const PatientFormParent = () => {
   return (

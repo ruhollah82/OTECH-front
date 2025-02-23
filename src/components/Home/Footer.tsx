@@ -101,30 +101,30 @@ const Footer: React.FC = () => {
               {[
                 {
                   Icon: WhatsApp,
-                  link: "https://web.whatsapp.com/send?phone=918977889778",
+                  link: "#",
                 },
                 {
                   Icon: Facebook,
-                  link: "https://www.facebook.com/PaceHospitals",
+                  link: "#",
                 },
-                { Icon: Twitter, link: "https://twitter.com/pacehospitals" },
+                { Icon: Twitter, link: "#" },
                 {
                   Icon: Instagram,
-                  link: "https://instagram.com/pacehospitals/",
+                  link: "#",
                 },
                 {
                   Icon: YouTube,
-                  link: "https://www.youtube.com/c/PACEHospitals",
+                  link: "#",
                 },
                 {
                   Icon: LinkedIn,
-                  link: "https://in.linkedin.com/company/pace-hospitals",
+                  link: "#",
                 },
                 {
                   Icon: Pinterest,
-                  link: "https://in.pinterest.com/pacehospitals/",
+                  link: "#",
                 },
-                { Icon: Email, link: "mailto:health@pacehospitals.in" },
+                { Icon: Email, link: "mailto:ruhollah.naserii@gmail.com" },
               ].map(({ Icon, link }, index) => (
                 <IconButton
                   key={link}

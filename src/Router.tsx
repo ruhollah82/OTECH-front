@@ -1,13 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import PatientFormParent from "./components/PatientForm";
-import ArticleDetail from "./components/ArticleDetail";
-import LoginPage from "./components/LoginPage";
-import CameraStreamer from "./components/GateTest";
+import Home from "./components/Pages/Home";
+
+import CameraStreamer from "./components/Pages/GateTest";
+import PatientFormParent from "./components/Pages/PatientFormParent";
+import ArticleDetail from "./components/Articles/ArticleDetail";
+import LoginPage from "./components/Pages/LoginPage";
 
 const AppRouter = () => {
-  // const { loginUser, loading, error, token } = useLogin();
-
   return (
     <Router>
       <Routes>

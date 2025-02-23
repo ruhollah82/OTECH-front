@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import Header from "./components/Header";
-import ParallaxSection from "./components/Parallaxsection";
-import SpecialitiesSection from "./components/SpecialitiesSection";
-import HmpvSection from "./components/HmpvSection";
-import ArticleParent from "./components/ArticleParent";
-import StatsComponent from "./components/StatsComponent";
-import Footer from "./components/Footer";
-import DrawerComponent from "./components/DrawerComponent";
+import Header from "../Home/Header";
+import ParallaxSection from "../Home/Parallaxsection";
+import SpecialitiesSection from "../Home/SpecialitiesSection";
+import HmpvSection from "../Home/HmpvSection";
+import ArticleParent from "../Home/ArticleParent";
+import StatsComponent from "../Home/StatsComponent";
+import Footer from "../Home/Footer";
+import DrawerComponent from "../Home/DrawerComponent";
 import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "./context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 
 const Home: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState(false);

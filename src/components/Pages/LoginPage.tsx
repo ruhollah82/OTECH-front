@@ -11,8 +11,8 @@ import { loadSlim } from "tsparticles-slim";
 import { useCallback, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import type { Engine } from "tsparticles-engine";
-import useLogin from "../hooks/useLogin";
-import { useAuth } from "../context/AuthContext";
+import useLogin from "../../hooks/useLogin";
+import { useAuth } from "../../context/AuthContext";
 import { AccountCircle, Lock } from "@mui/icons-material";
 
 const fadeIn = keyframes`
