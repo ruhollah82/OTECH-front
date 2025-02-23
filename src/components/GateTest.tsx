@@ -60,7 +60,7 @@ const PatientDetails = ({
         mb: 2,
       }}
     >
-      Patient Overview
+      برسی اجمالی بیمار
     </Typography>
 
     {loading ? (
@@ -78,8 +78,10 @@ const PatientDetails = ({
         <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
           <Avatar sx={{ bgcolor: "#60efff", mr: 2 }}>{data.name[0]}</Avatar>
           <Box>
-            <Typography variant="h6">{data.name}</Typography>
-            <Typography variant="body2">
+            <Typography variant="h6" sx={{ color: "#60efff" }}>
+              {data.name}
+            </Typography>
+            <Typography variant="body2" sx={{ color: "#60efff" }}>
               {data.age}yrs • {data.gender}
             </Typography>
           </Box>
@@ -88,7 +90,7 @@ const PatientDetails = ({
         <Divider sx={{ borderColor: "rgba(96,239,255,0.3)", my: 2 }} />
 
         <Typography variant="subtitle1" sx={{ color: "#60efff" }}>
-          Medical History
+          سابقه پزشکی
         </Typography>
         <ul style={{ paddingLeft: 20, margin: "8px 0" }}>
           {data.medicalHistory.map((item, i) => (
@@ -102,7 +104,7 @@ const PatientDetails = ({
           <>
             <Divider sx={{ borderColor: "rgba(96,239,255,0.3)", my: 2 }} />
             <Typography variant="subtitle1" sx={{ color: "#60efff" }}>
-              AI Diagnosis
+              معاینه هوشمند
             </Typography>
             <Box
               sx={{
@@ -122,7 +124,7 @@ const PatientDetails = ({
       </>
     ) : (
       <Typography variant="body1" sx={{ color: "rgba(255,255,255,0.6)" }}>
-        No patient data available. Start streaming to analyze.
+        اطلاعات بیمار یافت نشد. برای شروع، معاینه هوشمند را آغاز کنید.
       </Typography>
     )}
   </Box>
@@ -142,8 +144,6 @@ const CameraStreamer = () => {
     await loadSlim(engine);
   }, []);
 
-  const navigate = useNavigate();
-
   useEffect(() => {
     if (streaming) {
       setLoadingPatientData(true);
@@ -153,8 +153,8 @@ const CameraStreamer = () => {
           age: 34,
           gender: "Male",
           lastVisit: "2024-02-15",
-          medicalHistory: ["Hypertension", "Type II Diabetes"],
-          diagnosis: "Early stage cataract detected",
+          medicalHistory: ["ام اس نوع دو", "نیازمند ویلچر"],
+          diagnosis: "وضعیت بیمار متعادل است و نیازمند ویزیت پزشک نیست.",
           confidence: 0.92,
         });
         setLoadingPatientData(false);
@@ -174,7 +174,7 @@ const CameraStreamer = () => {
       }
       return stream;
     } catch (err) {
-      setError("Camera access denied or not available");
+      setError("عدم دسترسی به وبکم");
       return null;
     } finally {
       setLoading(false);
@@ -200,7 +200,7 @@ const CameraStreamer = () => {
       mediaRecorderRef.current.start(1000);
       setStreaming(true);
     } catch (err) {
-      setError("Failed to start streaming");
+      setError("مشکل در استریم به سرور");
     }
   };
 
@@ -336,7 +336,7 @@ const CameraStreamer = () => {
                 mb: 2,
               }}
             >
-              Live Diagnostic Feed
+              پنل معاینه آنلاین
             </Typography>
 
             <Box
@@ -371,7 +371,7 @@ const CameraStreamer = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ color: "#60efff" }}>
-                    Camera Feed Inactive
+                    وبکم غیر فعال است
                   </Typography>
                 </Box>
               )}
@@ -390,16 +390,21 @@ const CameraStreamer = () => {
                   }}
                   onClick={startStreaming}
                 >
-                  Start Diagnosis
+                  شروع معاینه
                 </Button>
               ) : (
                 <Button
                   variant="contained"
                   color="secondary"
                   onClick={stopStreaming}
-                  sx={{ px: 6 }}
+                  sx={{
+                    px: 6,
+                    background:
+                      "linear-gradient(45deg, #60efff 0%, #0061ff 100%)",
+                    "&:hover": { transform: "translateY(-2px)" },
+                  }}
                 >
-                  End Session
+                  توقف معاینه
                 </Button>
               )}
             </Box>

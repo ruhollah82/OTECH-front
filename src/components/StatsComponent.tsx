@@ -5,12 +5,11 @@ import {
   MedicalServices,
   EmojiEvents,
 } from "@mui/icons-material";
-import { useTheme } from "@mui/material/styles";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
 import type { Engine } from "tsparticles-engine";
-import React from "react"; // Add this import at the top
+import React from "react";
 
 const float = keyframes`
   0% { transform: translateY(0px); }
@@ -24,7 +23,6 @@ const fadeIn = keyframes`
 `;
 
 const StatsComponent = () => {
-  const theme = useTheme();
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
